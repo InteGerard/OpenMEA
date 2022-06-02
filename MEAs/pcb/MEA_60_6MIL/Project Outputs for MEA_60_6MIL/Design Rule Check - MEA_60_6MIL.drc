@@ -1,0 +1,210 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc
+Date     : 2021-11-06
+Time     : 9:27:13 PM
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+   Violation between Clearance Constraint: (5.906mil < 6mil) Between Track (-18mil,90mil)(-5.906mil,102.094mil) on Top Copper Layer And Track (5.906mil,102.094mil)(18mil,90mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.906mil < 6mil) Between Track (-18mil,-90mil)(-5.906mil,-102.094mil) on Top Copper Layer And Track (5.906mil,-102.094mil)(18mil,-90mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.906mil < 6mil) Between Track (-18mil,90mil)(-5.906mil,102.094mil) on Top Copper Layer And Track (5.906mil,102.094mil)(5.906mil,102.362mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.906mil < 6mil) Between Track (-18mil,-90mil)(-5.906mil,-102.094mil) on Top Copper Layer And Track (5.906mil,-102.362mil)(5.906mil,-102.094mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.956mil < 6mil) Between Track (-18mil,90mil)(-5.906mil,102.094mil) on Top Copper Layer And Track (6mil,102.362mil)(6mil,261.906mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.956mil < 6mil) Between Track (-18mil,-90mil)(-5.906mil,-102.094mil) on Top Copper Layer And Track (6mil,-261.906mil)(6mil,-102.362mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.906mil < 6mil) Between Track (5.906mil,102.094mil)(18mil,90mil) on Top Copper Layer And Track (-5.906mil,102.094mil)(-5.906mil,102.362mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.906mil < 6mil) Between Track (5.906mil,-102.094mil)(18mil,-90mil) on Top Copper Layer And Track (-5.906mil,-102.362mil)(-5.906mil,-102.094mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.956mil < 6mil) Between Track (5.906mil,102.094mil)(18mil,90mil) on Top Copper Layer And Track (-6mil,102.362mil)(-6mil,261.906mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.956mil < 6mil) Between Track (5.906mil,-102.094mil)(18mil,-90mil) on Top Copper Layer And Track (-6mil,-261.906mil)(-6mil,-102.362mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.906mil < 6mil) Between Track (5.906mil,102.094mil)(5.906mil,102.362mil) on Top Copper Layer And Track (-5.906mil,102.094mil)(-5.906mil,102.362mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.953mil < 6mil) Between Track (5.906mil,102.094mil)(5.906mil,102.362mil) on Top Copper Layer And Track (-6mil,102.362mil)(-6mil,261.906mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.953mil < 6mil) Between Track (-5.906mil,102.094mil)(-5.906mil,102.362mil) on Top Copper Layer And Track (6mil,102.362mil)(6mil,261.906mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.906mil < 6mil) Between Track (5.906mil,-102.362mil)(5.906mil,-102.094mil) on Top Copper Layer And Track (-5.906mil,-102.362mil)(-5.906mil,-102.094mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.953mil < 6mil) Between Track (5.906mil,-102.362mil)(5.906mil,-102.094mil) on Top Copper Layer And Track (-6mil,-261.906mil)(-6mil,-102.362mil) on Top Copper Layer 
+   Violation between Clearance Constraint: (5.953mil < 6mil) Between Track (-5.906mil,-102.362mil)(-5.906mil,-102.094mil) on Top Copper Layer And Track (6mil,-261.906mil)(6mil,-102.362mil) on Top Copper Layer 
+Rule Violations :16
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=5.906mil) (Max=1968.504mil) (Preferred=8mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=9.842mil) (Conductor Width=5.906mil) (Air Gap=5.906mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=5.906mil) (All)
+   Violation between Minimum Annular Ring: (Collision < 5.906mil) Via (0mil,0mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)
+   Violation between Minimum Annular Ring: (Collision < 5.906mil) Via (0mil,36mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)
+   Violation between Minimum Annular Ring: (Collision < 5.906mil) Via (0mil,-36mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)
+   Violation between Minimum Annular Ring: (Collision < 5.906mil) Via (36mil,0mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)
+   Violation between Minimum Annular Ring: (Collision < 5.906mil) Via (-36mil,0mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)
+Rule Violations :5
+
+Processing Rule : Hole Size Constraint (Min=9.842mil) (Max=15.748mil) (All)
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-12(-705mil,517mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-13(-705mil,329mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-14(-705mil,47mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-15(-705mil,-47mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-16(-705mil,-329mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-17(-705mil,-517mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-21(-611mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-22(-705mil,611mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-23(-705mil,423mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-24(-705mil,141mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-25(-705mil,-141mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-26(-705mil,-423mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-27(-705mil,-611mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-28(-611mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-31(-423mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-32(-517mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-33(-705mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-34(-705mil,235mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-35(-705mil,-235mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-36(-705mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-37(-517mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-38(-423mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-41(-141mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-42(-47mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-43(-235mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-44(-329mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-45(-329mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-46(-235mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-47(-47mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-48(-141mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-51(141mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-52(47mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-53(235mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-54(329mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-55(329mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-56(235mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-57(47mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-58(141mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-61(423mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-62(517mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-63(705mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-64(705mil,235mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-65(705mil,-235mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-66(705mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-67(517mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-68(423mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-71(611mil,705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-72(705mil,611mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-73(705mil,423mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-74(705mil,141mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-75(705mil,-141mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-76(705mil,-423mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-77(705mil,-611mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-78(611mil,-705mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-82(705mil,517mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-83(705mil,329mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-84(705mil,47mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-85(705mil,-47mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-86(705mil,-329mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *?-87(705mil,-517mil) on Multi-Layer Actual Hole Size = 29mil
+Rule Violations :60
+
+Processing Rule : Hole To Hole Clearance (Gap=17.716mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=5.906mil) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-12(-705mil,517mil) on Multi-Layer And Pad *?-22(-705mil,611mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-12(-705mil,517mil) on Multi-Layer And Pad *?-23(-705mil,423mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-13(-705mil,329mil) on Multi-Layer And Pad *?-23(-705mil,423mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-13(-705mil,329mil) on Multi-Layer And Pad *?-34(-705mil,235mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-14(-705mil,47mil) on Multi-Layer And Pad *?-15(-705mil,-47mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-14(-705mil,47mil) on Multi-Layer And Pad *?-24(-705mil,141mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-15(-705mil,-47mil) on Multi-Layer And Pad *?-25(-705mil,-141mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-16(-705mil,-329mil) on Multi-Layer And Pad *?-26(-705mil,-423mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-16(-705mil,-329mil) on Multi-Layer And Pad *?-35(-705mil,-235mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-17(-705mil,-517mil) on Multi-Layer And Pad *?-26(-705mil,-423mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-17(-705mil,-517mil) on Multi-Layer And Pad *?-27(-705mil,-611mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-21(-611mil,705mil) on Multi-Layer And Pad *?-32(-517mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-21(-611mil,705mil) on Multi-Layer And Pad *?-33(-705mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-22(-705mil,611mil) on Multi-Layer And Pad *?-33(-705mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-24(-705mil,141mil) on Multi-Layer And Pad *?-34(-705mil,235mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-25(-705mil,-141mil) on Multi-Layer And Pad *?-35(-705mil,-235mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-27(-705mil,-611mil) on Multi-Layer And Pad *?-36(-705mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-28(-611mil,-705mil) on Multi-Layer And Pad *?-36(-705mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-28(-611mil,-705mil) on Multi-Layer And Pad *?-37(-517mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-31(-423mil,705mil) on Multi-Layer And Pad *?-32(-517mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-31(-423mil,705mil) on Multi-Layer And Pad *?-44(-329mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-37(-517mil,-705mil) on Multi-Layer And Pad *?-38(-423mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-38(-423mil,-705mil) on Multi-Layer And Pad *?-45(-329mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-41(-141mil,705mil) on Multi-Layer And Pad *?-42(-47mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-41(-141mil,705mil) on Multi-Layer And Pad *?-43(-235mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-42(-47mil,705mil) on Multi-Layer And Pad *?-52(47mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-43(-235mil,705mil) on Multi-Layer And Pad *?-44(-329mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-45(-329mil,-705mil) on Multi-Layer And Pad *?-46(-235mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-46(-235mil,-705mil) on Multi-Layer And Pad *?-48(-141mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-47(-47mil,-705mil) on Multi-Layer And Pad *?-48(-141mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-47(-47mil,-705mil) on Multi-Layer And Pad *?-57(47mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-51(141mil,705mil) on Multi-Layer And Pad *?-52(47mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-51(141mil,705mil) on Multi-Layer And Pad *?-53(235mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-53(235mil,705mil) on Multi-Layer And Pad *?-54(329mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-54(329mil,705mil) on Multi-Layer And Pad *?-61(423mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-55(329mil,-705mil) on Multi-Layer And Pad *?-56(235mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-55(329mil,-705mil) on Multi-Layer And Pad *?-68(423mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-56(235mil,-705mil) on Multi-Layer And Pad *?-58(141mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-57(47mil,-705mil) on Multi-Layer And Pad *?-58(141mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-61(423mil,705mil) on Multi-Layer And Pad *?-62(517mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-62(517mil,705mil) on Multi-Layer And Pad *?-71(611mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-63(705mil,705mil) on Multi-Layer And Pad *?-71(611mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-63(705mil,705mil) on Multi-Layer And Pad *?-72(705mil,611mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-64(705mil,235mil) on Multi-Layer And Pad *?-74(705mil,141mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-64(705mil,235mil) on Multi-Layer And Pad *?-83(705mil,329mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-65(705mil,-235mil) on Multi-Layer And Pad *?-75(705mil,-141mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-65(705mil,-235mil) on Multi-Layer And Pad *?-86(705mil,-329mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-66(705mil,-705mil) on Multi-Layer And Pad *?-77(705mil,-611mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-66(705mil,-705mil) on Multi-Layer And Pad *?-78(611mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-67(517mil,-705mil) on Multi-Layer And Pad *?-68(423mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-67(517mil,-705mil) on Multi-Layer And Pad *?-78(611mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-72(705mil,611mil) on Multi-Layer And Pad *?-82(705mil,517mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-73(705mil,423mil) on Multi-Layer And Pad *?-82(705mil,517mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-73(705mil,423mil) on Multi-Layer And Pad *?-83(705mil,329mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-74(705mil,141mil) on Multi-Layer And Pad *?-84(705mil,47mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-75(705mil,-141mil) on Multi-Layer And Pad *?-85(705mil,-47mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-76(705mil,-423mil) on Multi-Layer And Pad *?-86(705mil,-329mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-76(705mil,-423mil) on Multi-Layer And Pad *?-87(705mil,-517mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-77(705mil,-611mil) on Multi-Layer And Pad *?-87(705mil,-517mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.449mil < 5.906mil) Between Pad *?-84(705mil,47mil) on Multi-Layer And Pad *?-85(705mil,-47mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]
+Rule Violations :60
+
+Processing Rule : Silk To Solder Mask (Clearance=7.874mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=7.874mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (964.567mil,-964.567mil)(964.567mil,964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (964.567mil,-964.567mil)(964.567mil,964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (964.567mil,-964.567mil)(964.567mil,964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,964.567mil)(964.567mil,964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,964.567mil)(964.567mil,964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,964.567mil)(964.567mil,964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(964.567mil,-964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(964.567mil,-964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(964.567mil,-964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(-964.567mil,964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(-964.567mil,964.567mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(-964.567mil,964.567mil) on Top Overlay 
+Rule Violations :12
+
+Processing Rule : Room MEA_60_6MIL (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (Disabled)(InComponentClass('MEA_60_6MIL'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 153
+Waived Violations : 0
+Time Elapsed        : 00:00:02

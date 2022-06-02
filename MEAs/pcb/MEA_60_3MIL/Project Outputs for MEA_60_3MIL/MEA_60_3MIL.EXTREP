@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: MEA_60_3MIL.GBR   2021-11-11  1:06:39 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GTL                Top Copper Layer                        
+.G1                 Internal Copper Layer 1                 
+.G2                 Internal Copper Layer 2                 
+.GBL                Bottom Copper Layer                     
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GM3                Top Courtyard                           
+------------------------------------------------------------------------------------------

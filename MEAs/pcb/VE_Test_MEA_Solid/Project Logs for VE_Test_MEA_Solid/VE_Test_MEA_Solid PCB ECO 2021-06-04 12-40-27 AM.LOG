@@ -1,0 +1,20 @@
+Added Component: Designator=*?(MCS_MEA)
+Added Pin To Net: NetName=Net*?_12 Pin=*?-12
+Added Pin To Net: NetName=Net*?_12 Pin=*?-12
+Added Pin To Net: NetName=Net*?_12 Pin=*?-12
+Added Pin To Net: NetName=Net*?_12 Pin=*?-12
+Added Pin To Net: NetName=Net*?_12 Pin=*?-13
+Added Pin To Net: NetName=Net*?_12 Pin=*?-13
+Added Pin To Net: NetName=Net*?_12 Pin=*?-13
+Added Pin To Net: NetName=Net*?_12 Pin=*?-13
+Added Pin To Net: NetName=Net*?_12 Pin=*?-14
+Added Pin To Net: NetName=Net*?_12 Pin=*?-14
+Added Pin To Net: NetName=Net*?_12 Pin=*?-14
+Added Pin To Net: NetName=Net*?_12 Pin=*?-14
+Added Pin To Net: NetName=Net*?_12 Pin=*?-15
+Added Pin To Net: NetName=Net*?_12 Pin=*?-15
+Added Pin To Net: NetName=Net*?_12 Pin=*?-15
+Added Pin To Net: NetName=Net*?_12 Pin=*?-15
+Added Pin To Net: NetName=Net*?_12 Pin=*?-16
+Added Pin To Net: NetName=Net*?_12 Pin=*?-16
+Added Member To Class: ClassName=VE_Test_MEA_Solid Member=Component *? POGO_PINS

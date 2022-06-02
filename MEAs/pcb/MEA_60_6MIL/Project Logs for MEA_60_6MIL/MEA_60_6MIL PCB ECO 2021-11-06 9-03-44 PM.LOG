@@ -1,0 +1,184 @@
+Change Component Footprint: Designator=*? Old Footprint=MEA_6mil_64 New Footprint=MCS_MEA_VE_TEST_1P25
+Added Pin To Net: NetName=E0 Pin=*?-72
+Added Pin To Net: NetName=E0 Pin=*?-72
+Added Net: Name=E0
+Added Pin To Net: NetName=E1 Pin=*?-82
+Added Pin To Net: NetName=E1 Pin=*?-82
+Added Net: Name=E1
+Added Pin To Net: NetName=E2 Pin=*?-73
+Added Pin To Net: NetName=E2 Pin=*?-73
+Added Net: Name=E2
+Added Pin To Net: NetName=E3 Pin=*?-83
+Added Pin To Net: NetName=E3 Pin=*?-83
+Added Net: Name=E3
+Added Pin To Net: NetName=E4 Pin=*?-64
+Added Pin To Net: NetName=E4 Pin=*?-64
+Added Net: Name=E4
+Added Pin To Net: NetName=E5 Pin=*?-74
+Added Pin To Net: NetName=E5 Pin=*?-74
+Added Net: Name=E5
+Added Pin To Net: NetName=E6 Pin=*?-84
+Added Pin To Net: NetName=E6 Pin=*?-84
+Added Net: Name=E6
+Added Pin To Net: NetName=E7 Pin=*?-85
+Added Pin To Net: NetName=E7 Pin=*?-85
+Added Net: Name=E7
+Added Pin To Net: NetName=E8 Pin=*?-75
+Added Pin To Net: NetName=E8 Pin=*?-75
+Added Net: Name=E8
+Added Pin To Net: NetName=E9 Pin=*?-65
+Added Pin To Net: NetName=E9 Pin=*?-65
+Added Net: Name=E9
+Added Pin To Net: NetName=E10 Pin=*?-86
+Added Pin To Net: NetName=E10 Pin=*?-86
+Added Net: Name=E10
+Added Pin To Net: NetName=E11 Pin=*?-76
+Added Pin To Net: NetName=E11 Pin=*?-76
+Added Net: Name=E11
+Added Pin To Net: NetName=E12 Pin=*?-87
+Added Pin To Net: NetName=E12 Pin=*?-87
+Added Net: Name=E12
+Added Pin To Net: NetName=E13 Pin=*?-77
+Added Pin To Net: NetName=E13 Pin=*?-77
+Added Net: Name=E13
+Added Pin To Net: NetName=E14 Pin=*?-66
+Added Pin To Net: NetName=E14 Pin=*?-66
+Added Net: Name=E14
+Added Pin To Net: NetName=E15 Pin=*?-78
+Added Pin To Net: NetName=E15 Pin=*?-78
+Added Net: Name=E15
+Added Pin To Net: NetName=E16 Pin=*?-67
+Added Pin To Net: NetName=E16 Pin=*?-67
+Added Net: Name=E16
+Added Pin To Net: NetName=E17 Pin=*?-68
+Added Pin To Net: NetName=E17 Pin=*?-68
+Added Net: Name=E17
+Added Pin To Net: NetName=E18 Pin=*?-55
+Added Pin To Net: NetName=E18 Pin=*?-55
+Added Net: Name=E18
+Added Pin To Net: NetName=E19 Pin=*?-56
+Added Pin To Net: NetName=E19 Pin=*?-56
+Added Net: Name=E19
+Added Pin To Net: NetName=E20 Pin=*?-58
+Added Pin To Net: NetName=E20 Pin=*?-58
+Added Net: Name=E20
+Added Pin To Net: NetName=E21 Pin=*?-57
+Added Pin To Net: NetName=E21 Pin=*?-57
+Added Net: Name=E21
+Added Pin To Net: NetName=E22 Pin=*?-47
+Added Pin To Net: NetName=E22 Pin=*?-47
+Added Net: Name=E22
+Added Pin To Net: NetName=E23 Pin=*?-48
+Added Pin To Net: NetName=E23 Pin=*?-48
+Added Net: Name=E23
+Added Pin To Net: NetName=E24 Pin=*?-46
+Added Pin To Net: NetName=E24 Pin=*?-46
+Added Net: Name=E24
+Added Pin To Net: NetName=E25 Pin=*?-45
+Added Pin To Net: NetName=E25 Pin=*?-45
+Added Net: Name=E25
+Added Pin To Net: NetName=E26 Pin=*?-38
+Added Pin To Net: NetName=E26 Pin=*?-38
+Added Net: Name=E26
+Added Pin To Net: NetName=E27 Pin=*?-37
+Added Pin To Net: NetName=E27 Pin=*?-37
+Added Net: Name=E27
+Added Pin To Net: NetName=E28 Pin=*?-28
+Added Pin To Net: NetName=E28 Pin=*?-28
+Added Net: Name=E28
+Added Pin To Net: NetName=E29 Pin=*?-36
+Added Pin To Net: NetName=E29 Pin=*?-36
+Added Net: Name=E29
+Added Pin To Net: NetName=E31 Pin=*?-27
+Added Pin To Net: NetName=E31 Pin=*?-27
+Added Net: Name=E31
+Added Pin To Net: NetName=E32 Pin=*?-17
+Added Pin To Net: NetName=E32 Pin=*?-17
+Added Net: Name=E32
+Added Pin To Net: NetName=E33 Pin=*?-26
+Added Pin To Net: NetName=E33 Pin=*?-26
+Added Net: Name=E33
+Added Pin To Net: NetName=E34 Pin=*?-16
+Added Pin To Net: NetName=E34 Pin=*?-16
+Added Net: Name=E34
+Added Pin To Net: NetName=E35 Pin=*?-35
+Added Pin To Net: NetName=E35 Pin=*?-35
+Added Net: Name=E35
+Added Pin To Net: NetName=E36 Pin=*?-25
+Added Pin To Net: NetName=E36 Pin=*?-25
+Added Net: Name=E36
+Added Pin To Net: NetName=E37 Pin=*?-15
+Added Pin To Net: NetName=E37 Pin=*?-15
+Added Net: Name=E37
+Added Pin To Net: NetName=E38 Pin=*?-14
+Added Pin To Net: NetName=E38 Pin=*?-14
+Added Net: Name=E38
+Added Pin To Net: NetName=E39 Pin=*?-24
+Added Pin To Net: NetName=E39 Pin=*?-24
+Added Net: Name=E39
+Added Pin To Net: NetName=E40 Pin=*?-34
+Added Pin To Net: NetName=E40 Pin=*?-34
+Added Net: Name=E40
+Added Pin To Net: NetName=E41 Pin=*?-13
+Added Pin To Net: NetName=E41 Pin=*?-13
+Added Net: Name=E41
+Added Pin To Net: NetName=E42 Pin=*?-23
+Added Pin To Net: NetName=E42 Pin=*?-23
+Added Net: Name=E42
+Added Pin To Net: NetName=E43 Pin=*?-12
+Added Pin To Net: NetName=E43 Pin=*?-12
+Added Net: Name=E43
+Added Pin To Net: NetName=E44 Pin=*?-22
+Added Pin To Net: NetName=E44 Pin=*?-22
+Added Net: Name=E44
+Added Pin To Net: NetName=E45 Pin=*?-33
+Added Pin To Net: NetName=E45 Pin=*?-33
+Added Net: Name=E45
+Added Pin To Net: NetName=E46 Pin=*?-21
+Added Pin To Net: NetName=E46 Pin=*?-21
+Added Net: Name=E46
+Added Pin To Net: NetName=E47 Pin=*?-32
+Added Pin To Net: NetName=E47 Pin=*?-32
+Added Net: Name=E47
+Added Pin To Net: NetName=E48 Pin=*?-31
+Added Pin To Net: NetName=E48 Pin=*?-31
+Added Net: Name=E48
+Added Pin To Net: NetName=E49 Pin=*?-44
+Added Pin To Net: NetName=E49 Pin=*?-44
+Added Net: Name=E49
+Added Pin To Net: NetName=E50 Pin=*?-43
+Added Pin To Net: NetName=E50 Pin=*?-43
+Added Net: Name=E50
+Added Pin To Net: NetName=E51 Pin=*?-41
+Added Pin To Net: NetName=E51 Pin=*?-41
+Added Net: Name=E51
+Added Pin To Net: NetName=E52 Pin=*?-42
+Added Pin To Net: NetName=E52 Pin=*?-42
+Added Net: Name=E52
+Added Pin To Net: NetName=E53 Pin=*?-52
+Added Pin To Net: NetName=E53 Pin=*?-52
+Added Net: Name=E53
+Added Pin To Net: NetName=E54 Pin=*?-51
+Added Pin To Net: NetName=E54 Pin=*?-51
+Added Net: Name=E54
+Added Pin To Net: NetName=E55 Pin=*?-53
+Added Pin To Net: NetName=E55 Pin=*?-53
+Added Net: Name=E55
+Added Pin To Net: NetName=E56 Pin=*?-54
+Added Pin To Net: NetName=E56 Pin=*?-54
+Added Net: Name=E56
+Added Pin To Net: NetName=E57 Pin=*?-61
+Added Pin To Net: NetName=E57 Pin=*?-61
+Added Net: Name=E57
+Added Pin To Net: NetName=E58 Pin=*?-62
+Added Pin To Net: NetName=E58 Pin=*?-62
+Added Net: Name=E58
+Added Pin To Net: NetName=E59 Pin=*?-71
+Added Pin To Net: NetName=E59 Pin=*?-71
+Added Net: Name=E59
+Added Pin To Net: NetName=E60 Pin=*?-63
+Added Pin To Net: NetName=E60 Pin=*?-63
+Added Net: Name=E60
+Change Class Name : Old Net Name=PCB_MCS_MEA New Net Name=MEA_60_6MIL
+Change Room Name: Old Name=PCB_MCS_MEA New Name=MEA_60_6MIL
+Change Room Scope: Old Scope=InComponentClass('PCB_MCS_MEA') New Scope=InComponentClass('MEA_60_6MIL')

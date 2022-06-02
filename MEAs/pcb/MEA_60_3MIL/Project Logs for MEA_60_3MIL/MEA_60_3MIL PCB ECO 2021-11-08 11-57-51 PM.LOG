@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=*? Old Footprint=MEA_6MIL_64 New Footprint=MEA_3mil_64
+Change Class Name : Old Net Name=MEA_60_6MIL New Net Name=MEA_60_3MIL
+Change Room Name: Old Name=MEA_60_6MIL New Name=MEA_60_3MIL
+Change Room Scope: Old Scope=InComponentClass('MEA_60_6MIL') New Scope=InComponentClass('MEA_60_3MIL')

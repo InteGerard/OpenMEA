@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [MEA_60_3MIL.PrjPcb]
+   Generated File[MEA_60_3MIL.TXT]
+   Generated File[MEA_60_3MIL.LDP]
+   Generated File[MEA_60_3MIL.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 1:06:49 PM On 2021-11-11

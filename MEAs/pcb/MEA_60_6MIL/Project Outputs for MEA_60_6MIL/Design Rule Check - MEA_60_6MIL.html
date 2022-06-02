@@ -1,0 +1,815 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD21\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2021-11-06</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9:27:13 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc" class="file"><acronym title="C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc">C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">153</td></tr>
+</table>
+</td>
+</table><a name="ID4ZSSMJRK0MTSJ2HCRFJTQP1CJGL03FZDTVZDSXP15UWY0GDSI2NJ"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPYBDQF5KDFW0W1ZAPDWKVBAPFAVNN1HLIWM4UDP2ZF032T4010G">Clearance Constraint (Gap=6mil) (All),(All)</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHUAY0PXWLD0DDV1A5IHK2ZPAXJTEA3QSGXWFVYJ3K50XMUAHS4ZO">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLYFGDWHQTVR1GRAQKSLOMTK04Y5133GARVKD2CX2SEQNCL1SNBK">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFSOP5WHQY0GHCWLGUCXVAEZK0BC144Q0UDLCP1MNOQSSL2OWBDXE">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDALUSW454H5HHHHULNE5S3BBZFNM0KHXUY0VNRIJDGLQPNXPY02EH">Width Constraint (Min=5.906mil) (Max=1968.504mil) (Preferred=8mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4IGL4RSG2VQ1II1X1KM5DFR4XFOYWRA1CBHNX2LSKSHASYTVPGGI">Power Plane Connect Rule(Relief Connect )(Expansion=9.842mil) (Conductor Width=5.906mil) (Air Gap=5.906mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRHWXO3JO3OTXG111MDNUGBY52HUZZMSM3DTH2MNFFEP0DKPUZ4CB">Minimum Annular Ring (Minimum=5.906mil) (All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQLGK03PDUKENJYFB2DJT12EI3PXS3V2UQFGL0EJUEQDWABIDKVYO">Hole Size Constraint (Min=9.842mil) (Max=15.748mil) (All)</a></td>
+<td class="column2">60</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3QETZS51YZMJECTHW2ZXD31EVJCA1XF3YS5URFHGMPRGK2BWLBGE">Hole To Hole Clearance (Gap=17.716mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDISXWJ5CDORRCKLPU121NTC34FM45IDKIBAPLDVFVYUXAYEEI10RG">Minimum Solder Mask Sliver (Gap=5.906mil) (All),(All)</a></td>
+<td class="column2">60</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDB24E4JWTJETTVS4EOX5F1YK5MHGKKDT3MNM2KC0MQSGZUKCBJJ">Silk To Solder Mask (Clearance=7.874mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYEQ0SWY4IW5RLF4WJGINX0PDLPWP02MNGGPBUNNG1IHRZHXKCHQM">Silk to Silk (Clearance=7.874mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDBVB2UMKH5VTEGHDS5DE32S2DH4OLY4US0JRQVLTD3UQYXOI3TLG">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID42QAXWR5CQPTNWU5JHGTX3J4JBPHKICBT1UGLONC1H4QKXWEMYZI">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5TW01PASPIALK2O5ZYVSSNGXVLF0XJTVHO0SPBN13DLFZFPOZNEB">Room MEA_60_6MIL (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (Disabled)(InComponentClass('MEA_60_6MIL'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQBXMUH4JEX4DB5SCIUV3TWIFUI3M1WDTIB03VYLGPCXJK3JAIPZG">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">153</td>
+</tr>
+</table><br><a name="IDPYBDQF5KDFW0W1ZAPDWKVBAPFAVNN1HLIWM4UDP2ZF032T4010G"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=6mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=1063.036mil|Location2.Y=1070.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=1063.036mil|Location2.Y=1070.286mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 6mil) Between Track (-18mil,90mil)(-5.906mil,102.094mil) on Top Copper Layer And Track (5.906mil,102.094mil)(18mil,90mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=858.847mil|Location2.Y=866.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=858.847mil|Location2.Y=866.097mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 6mil) Between Track (-18mil,-90mil)(-5.906mil,-102.094mil) on Top Copper Layer And Track (5.906mil,-102.094mil)(18mil,-90mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=1063.036mil|Location2.Y=1070.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=1063.036mil|Location2.Y=1070.286mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 6mil) Between Track (-18mil,90mil)(-5.906mil,102.094mil) on Top Copper Layer And Track (5.906mil,102.094mil)(5.906mil,102.362mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=858.847mil|Location2.Y=866.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=858.847mil|Location2.Y=866.097mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 6mil) Between Track (-18mil,-90mil)(-5.906mil,-102.094mil) on Top Copper Layer And Track (5.906mil,-102.362mil)(5.906mil,-102.094mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.966mil|Location2.X=968.216mil|Location1.Y=1063.17mil|Location2.Y=1070.42mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.966mil|Location2.X=968.216mil|Location1.Y=1063.17mil|Location2.Y=1070.42mil|Absolute=True">Clearance Constraint: (5.956mil &lt; 6mil) Between Track (-18mil,90mil)(-5.906mil,102.094mil) on Top Copper Layer And Track (6mil,102.362mil)(6mil,261.906mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.966mil|Location2.X=968.216mil|Location1.Y=858.714mil|Location2.Y=865.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.966mil|Location2.X=968.216mil|Location1.Y=858.714mil|Location2.Y=865.964mil|Absolute=True">Clearance Constraint: (5.956mil &lt; 6mil) Between Track (-18mil,-90mil)(-5.906mil,-102.094mil) on Top Copper Layer And Track (6mil,-261.906mil)(6mil,-102.362mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=1063.036mil|Location2.Y=1070.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=1063.036mil|Location2.Y=1070.286mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 6mil) Between Track (5.906mil,102.094mil)(18mil,90mil) on Top Copper Layer And Track (-5.906mil,102.094mil)(-5.906mil,102.362mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=858.847mil|Location2.Y=866.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=858.847mil|Location2.Y=866.097mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 6mil) Between Track (5.906mil,-102.094mil)(18mil,-90mil) on Top Copper Layer And Track (-5.906mil,-102.362mil)(-5.906mil,-102.094mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.918mil|Location2.X=968.168mil|Location1.Y=1063.17mil|Location2.Y=1070.42mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.918mil|Location2.X=968.168mil|Location1.Y=1063.17mil|Location2.Y=1070.42mil|Absolute=True">Clearance Constraint: (5.956mil &lt; 6mil) Between Track (5.906mil,102.094mil)(18mil,90mil) on Top Copper Layer And Track (-6mil,102.362mil)(-6mil,261.906mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.918mil|Location2.X=968.168mil|Location1.Y=858.714mil|Location2.Y=865.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.918mil|Location2.X=968.168mil|Location1.Y=858.714mil|Location2.Y=865.964mil|Absolute=True">Clearance Constraint: (5.956mil &lt; 6mil) Between Track (5.906mil,-102.094mil)(18mil,-90mil) on Top Copper Layer And Track (-6mil,-261.906mil)(-6mil,-102.362mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=1063.036mil|Location2.Y=1070.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=1063.036mil|Location2.Y=1070.286mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 6mil) Between Track (5.906mil,102.094mil)(5.906mil,102.362mil) on Top Copper Layer And Track (-5.906mil,102.094mil)(-5.906mil,102.362mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.918mil|Location2.X=968.168mil|Location1.Y=1063.304mil|Location2.Y=1070.554mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.918mil|Location2.X=968.168mil|Location1.Y=1063.304mil|Location2.Y=1070.554mil|Absolute=True">Clearance Constraint: (5.953mil &lt; 6mil) Between Track (5.906mil,102.094mil)(5.906mil,102.362mil) on Top Copper Layer And Track (-6mil,102.362mil)(-6mil,261.906mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.966mil|Location2.X=968.216mil|Location1.Y=1063.304mil|Location2.Y=1070.554mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.966mil|Location2.X=968.216mil|Location1.Y=1063.304mil|Location2.Y=1070.554mil|Absolute=True">Clearance Constraint: (5.953mil &lt; 6mil) Between Track (-5.906mil,102.094mil)(-5.906mil,102.362mil) on Top Copper Layer And Track (6mil,102.362mil)(6mil,261.906mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=858.58mil|Location2.Y=865.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.942mil|Location2.X=968.192mil|Location1.Y=858.58mil|Location2.Y=865.83mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 6mil) Between Track (5.906mil,-102.362mil)(5.906mil,-102.094mil) on Top Copper Layer And Track (-5.906mil,-102.362mil)(-5.906mil,-102.094mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.918mil|Location2.X=968.168mil|Location1.Y=858.58mil|Location2.Y=865.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.918mil|Location2.X=968.168mil|Location1.Y=858.58mil|Location2.Y=865.83mil|Absolute=True">Clearance Constraint: (5.953mil &lt; 6mil) Between Track (5.906mil,-102.362mil)(5.906mil,-102.094mil) on Top Copper Layer And Track (-6mil,-261.906mil)(-6mil,-102.362mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.966mil|Location2.X=968.216mil|Location1.Y=858.58mil|Location2.Y=865.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.966mil|Location2.X=968.216mil|Location1.Y=858.58mil|Location2.Y=865.83mil|Absolute=True">Clearance Constraint: (5.953mil &lt; 6mil) Between Track (-5.906mil,-102.362mil)(-5.906mil,-102.094mil) on Top Copper Layer And Track (6mil,-261.906mil)(6mil,-102.362mil) on Top Copper Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDRHWXO3JO3OTXG111MDNUGBY52HUZZMSM3DTH2MNFFEP0DKPUZ4CB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Annular Ring (Minimum=5.906mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=962.098mil|Location2.X=967.035mil|Location1.Y=968.004mil|Location2.Y=972.941mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=962.098mil|Location2.X=967.035mil|Location1.Y=968.004mil|Location2.Y=972.941mil|Absolute=True">Minimum Annular Ring: (Collision &lt; 5.906mil) Via (0mil,0mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=962.098mil|Location2.X=967.035mil|Location1.Y=1004.004mil|Location2.Y=1008.941mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=962.098mil|Location2.X=967.035mil|Location1.Y=1004.004mil|Location2.Y=1008.941mil|Absolute=True">Minimum Annular Ring: (Collision &lt; 5.906mil) Via (0mil,36mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=962.098mil|Location2.X=967.035mil|Location1.Y=932.004mil|Location2.Y=936.941mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=962.098mil|Location2.X=967.035mil|Location1.Y=932.004mil|Location2.Y=936.941mil|Absolute=True">Minimum Annular Ring: (Collision &lt; 5.906mil) Via (0mil,-36mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=998.098mil|Location2.X=1003.035mil|Location1.Y=968.004mil|Location2.Y=972.941mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=998.098mil|Location2.X=1003.035mil|Location1.Y=968.004mil|Location2.Y=972.941mil|Absolute=True">Minimum Annular Ring: (Collision &lt; 5.906mil) Via (36mil,0mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=926.098mil|Location2.X=931.035mil|Location1.Y=968.004mil|Location2.Y=972.941mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=926.098mil|Location2.X=931.035mil|Location1.Y=968.004mil|Location2.Y=972.941mil|Absolute=True">Minimum Annular Ring: (Collision &lt; 5.906mil) Via (-36mil,0mil) from Top Copper Layer to Bottom Copper Layer (Annular Ring=0mil) On (Top Layer)</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQLGK03PDUKENJYFB2DJT12EI3PXS3V2UQFGL0EJUEQDWABIDKVYO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=9.842mil) (Max=15.748mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1466.442mil|Location2.Y=1506.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1466.442mil|Location2.Y=1506.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-12(-705mil,517mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1278.442mil|Location2.Y=1318.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1278.442mil|Location2.Y=1318.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-13(-705mil,329mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=996.442mil|Location2.Y=1036.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=996.442mil|Location2.Y=1036.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-14(-705mil,47mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=902.442mil|Location2.Y=942.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=902.442mil|Location2.Y=942.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-15(-705mil,-47mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=620.442mil|Location2.Y=660.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=620.442mil|Location2.Y=660.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-16(-705mil,-329mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=432.442mil|Location2.Y=472.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=432.442mil|Location2.Y=472.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-17(-705mil,-517mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=338.442mil|Location2.X=378.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=338.442mil|Location2.X=378.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-21(-611mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1560.442mil|Location2.Y=1600.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1560.442mil|Location2.Y=1600.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-22(-705mil,611mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1372.442mil|Location2.Y=1412.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1372.442mil|Location2.Y=1412.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-23(-705mil,423mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1090.442mil|Location2.Y=1130.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1090.442mil|Location2.Y=1130.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-24(-705mil,141mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=808.442mil|Location2.Y=848.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=808.442mil|Location2.Y=848.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-25(-705mil,-141mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=526.442mil|Location2.Y=566.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=526.442mil|Location2.Y=566.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-26(-705mil,-423mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=338.442mil|Location2.Y=378.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=338.442mil|Location2.Y=378.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-27(-705mil,-611mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=338.442mil|Location2.X=378.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=338.442mil|Location2.X=378.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-28(-611mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=526.442mil|Location2.X=566.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=526.442mil|Location2.X=566.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-31(-423mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=432.442mil|Location2.X=472.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=432.442mil|Location2.X=472.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-32(-517mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-33(-705mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1184.442mil|Location2.Y=1224.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=1184.442mil|Location2.Y=1224.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-34(-705mil,235mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=714.442mil|Location2.Y=754.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=714.442mil|Location2.Y=754.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-35(-705mil,-235mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=244.442mil|Location2.X=284.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-36(-705mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=432.442mil|Location2.X=472.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=432.442mil|Location2.X=472.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-37(-517mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=526.442mil|Location2.X=566.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=526.442mil|Location2.X=566.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-38(-423mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.442mil|Location2.X=848.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.442mil|Location2.X=848.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-41(-141mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=902.442mil|Location2.X=942.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=902.442mil|Location2.X=942.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-42(-47mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=714.442mil|Location2.X=754.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=714.442mil|Location2.X=754.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-43(-235mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=620.442mil|Location2.X=660.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=620.442mil|Location2.X=660.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-44(-329mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=620.442mil|Location2.X=660.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=620.442mil|Location2.X=660.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-45(-329mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=714.442mil|Location2.X=754.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=714.442mil|Location2.X=754.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-46(-235mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=902.442mil|Location2.X=942.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=902.442mil|Location2.X=942.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-47(-47mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.442mil|Location2.X=848.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.442mil|Location2.X=848.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-48(-141mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1090.442mil|Location2.X=1130.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1090.442mil|Location2.X=1130.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-51(141mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=996.442mil|Location2.X=1036.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=996.442mil|Location2.X=1036.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-52(47mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1184.442mil|Location2.X=1224.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1184.442mil|Location2.X=1224.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-53(235mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1278.442mil|Location2.X=1318.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1278.442mil|Location2.X=1318.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-54(329mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1278.442mil|Location2.X=1318.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1278.442mil|Location2.X=1318.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-55(329mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1184.442mil|Location2.X=1224.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1184.442mil|Location2.X=1224.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-56(235mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=996.442mil|Location2.X=1036.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=996.442mil|Location2.X=1036.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-57(47mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1090.442mil|Location2.X=1130.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1090.442mil|Location2.X=1130.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-58(141mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1372.442mil|Location2.X=1412.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1372.442mil|Location2.X=1412.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-61(423mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1466.442mil|Location2.X=1506.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1466.442mil|Location2.X=1506.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-62(517mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-63(705mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1184.442mil|Location2.Y=1224.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1184.442mil|Location2.Y=1224.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-64(705mil,235mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=714.442mil|Location2.Y=754.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=714.442mil|Location2.Y=754.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-65(705mil,-235mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-66(705mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1466.442mil|Location2.X=1506.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1466.442mil|Location2.X=1506.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-67(517mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1372.442mil|Location2.X=1412.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1372.442mil|Location2.X=1412.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-68(423mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1560.442mil|Location2.X=1600.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1560.442mil|Location2.X=1600.488mil|Location1.Y=1654.442mil|Location2.Y=1694.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-71(611mil,705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1560.442mil|Location2.Y=1600.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1560.442mil|Location2.Y=1600.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-72(705mil,611mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1372.442mil|Location2.Y=1412.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1372.442mil|Location2.Y=1412.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-73(705mil,423mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1090.442mil|Location2.Y=1130.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1090.442mil|Location2.Y=1130.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-74(705mil,141mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=808.442mil|Location2.Y=848.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=808.442mil|Location2.Y=848.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-75(705mil,-141mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=526.442mil|Location2.Y=566.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=526.442mil|Location2.Y=566.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-76(705mil,-423mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=338.442mil|Location2.Y=378.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=338.442mil|Location2.Y=378.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-77(705mil,-611mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1560.442mil|Location2.X=1600.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1560.442mil|Location2.X=1600.488mil|Location1.Y=244.442mil|Location2.Y=284.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-78(611mil,-705mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1466.442mil|Location2.Y=1506.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1466.442mil|Location2.Y=1506.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-82(705mil,517mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1278.442mil|Location2.Y=1318.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=1278.442mil|Location2.Y=1318.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-83(705mil,329mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=996.442mil|Location2.Y=1036.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=996.442mil|Location2.Y=1036.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-84(705mil,47mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=902.442mil|Location2.Y=942.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=902.442mil|Location2.Y=942.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-85(705mil,-47mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=620.442mil|Location2.Y=660.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=620.442mil|Location2.Y=660.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-86(705mil,-329mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=432.442mil|Location2.Y=472.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1654.442mil|Location2.X=1694.488mil|Location1.Y=432.442mil|Location2.Y=472.693mil|Absolute=True">Hole Size Constraint: (29mil &gt; 15.748mil) Pad *?-87(705mil,-517mil) on Multi-Layer Actual Hole Size = 29mil</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDISXWJ5CDORRCKLPU121NTC34FM45IDKIBAPLDVFVYUXAYEEI10RG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=5.906mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1524.989mil|Location2.Y=1532.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1524.989mil|Location2.Y=1532.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-12(-705mil,517mil) on Multi-Layer And Pad *?-22(-705mil,611mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1430.989mil|Location2.Y=1438.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1430.989mil|Location2.Y=1438.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-12(-705mil,517mil) on Multi-Layer And Pad *?-23(-705mil,423mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1336.989mil|Location2.Y=1344.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1336.989mil|Location2.Y=1344.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-13(-705mil,329mil) on Multi-Layer And Pad *?-23(-705mil,423mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1242.989mil|Location2.Y=1250.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1242.989mil|Location2.Y=1250.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-13(-705mil,329mil) on Multi-Layer And Pad *?-34(-705mil,235mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=960.989mil|Location2.Y=968.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=960.989mil|Location2.Y=968.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-14(-705mil,47mil) on Multi-Layer And Pad *?-15(-705mil,-47mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1054.989mil|Location2.Y=1062.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1054.989mil|Location2.Y=1062.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-14(-705mil,47mil) on Multi-Layer And Pad *?-24(-705mil,141mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=866.989mil|Location2.Y=874.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=866.989mil|Location2.Y=874.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-15(-705mil,-47mil) on Multi-Layer And Pad *?-25(-705mil,-141mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=584.989mil|Location2.Y=592.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=584.989mil|Location2.Y=592.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-16(-705mil,-329mil) on Multi-Layer And Pad *?-26(-705mil,-423mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=678.989mil|Location2.Y=686.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=678.989mil|Location2.Y=686.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-16(-705mil,-329mil) on Multi-Layer And Pad *?-35(-705mil,-235mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=490.989mil|Location2.Y=498.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=490.989mil|Location2.Y=498.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-17(-705mil,-517mil) on Multi-Layer And Pad *?-26(-705mil,-423mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=396.989mil|Location2.Y=404.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=396.989mil|Location2.Y=404.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-17(-705mil,-517mil) on Multi-Layer And Pad *?-27(-705mil,-611mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=396.989mil|Location2.X=404.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=396.989mil|Location2.X=404.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-21(-611mil,705mil) on Multi-Layer And Pad *?-32(-517mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=302.989mil|Location2.X=310.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=302.989mil|Location2.X=310.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-21(-611mil,705mil) on Multi-Layer And Pad *?-33(-705mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1618.989mil|Location2.Y=1626.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1618.989mil|Location2.Y=1626.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-22(-705mil,611mil) on Multi-Layer And Pad *?-33(-705mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1148.989mil|Location2.Y=1156.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=1148.989mil|Location2.Y=1156.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-24(-705mil,141mil) on Multi-Layer And Pad *?-34(-705mil,235mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=772.989mil|Location2.Y=780.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=772.989mil|Location2.Y=780.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-25(-705mil,-141mil) on Multi-Layer And Pad *?-35(-705mil,-235mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=302.989mil|Location2.Y=310.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=255.989mil|Location2.X=263.145mil|Location1.Y=302.989mil|Location2.Y=310.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-27(-705mil,-611mil) on Multi-Layer And Pad *?-36(-705mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=302.989mil|Location2.X=310.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=302.989mil|Location2.X=310.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-28(-611mil,-705mil) on Multi-Layer And Pad *?-36(-705mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=396.989mil|Location2.X=404.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=396.989mil|Location2.X=404.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-28(-611mil,-705mil) on Multi-Layer And Pad *?-37(-517mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=490.989mil|Location2.X=498.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=490.989mil|Location2.X=498.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-31(-423mil,705mil) on Multi-Layer And Pad *?-32(-517mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=584.989mil|Location2.X=592.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=584.989mil|Location2.X=592.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-31(-423mil,705mil) on Multi-Layer And Pad *?-44(-329mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=490.989mil|Location2.X=498.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=490.989mil|Location2.X=498.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-37(-517mil,-705mil) on Multi-Layer And Pad *?-38(-423mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=584.989mil|Location2.X=592.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=584.989mil|Location2.X=592.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-38(-423mil,-705mil) on Multi-Layer And Pad *?-45(-329mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=866.989mil|Location2.X=874.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=866.989mil|Location2.X=874.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-41(-141mil,705mil) on Multi-Layer And Pad *?-42(-47mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=772.989mil|Location2.X=780.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=772.989mil|Location2.X=780.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-41(-141mil,705mil) on Multi-Layer And Pad *?-43(-235mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.989mil|Location2.X=968.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.989mil|Location2.X=968.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-42(-47mil,705mil) on Multi-Layer And Pad *?-52(47mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=678.989mil|Location2.X=686.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=678.989mil|Location2.X=686.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-43(-235mil,705mil) on Multi-Layer And Pad *?-44(-329mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=678.989mil|Location2.X=686.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=678.989mil|Location2.X=686.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-45(-329mil,-705mil) on Multi-Layer And Pad *?-46(-235mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=772.989mil|Location2.X=780.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=772.989mil|Location2.X=780.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-46(-235mil,-705mil) on Multi-Layer And Pad *?-48(-141mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=866.989mil|Location2.X=874.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=866.989mil|Location2.X=874.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-47(-47mil,-705mil) on Multi-Layer And Pad *?-48(-141mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.989mil|Location2.X=968.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=960.989mil|Location2.X=968.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-47(-47mil,-705mil) on Multi-Layer And Pad *?-57(47mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1054.989mil|Location2.X=1062.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1054.989mil|Location2.X=1062.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-51(141mil,705mil) on Multi-Layer And Pad *?-52(47mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1148.989mil|Location2.X=1156.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1148.989mil|Location2.X=1156.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-51(141mil,705mil) on Multi-Layer And Pad *?-53(235mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1242.989mil|Location2.X=1250.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1242.989mil|Location2.X=1250.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-53(235mil,705mil) on Multi-Layer And Pad *?-54(329mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1336.989mil|Location2.X=1344.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1336.989mil|Location2.X=1344.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-54(329mil,705mil) on Multi-Layer And Pad *?-61(423mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1242.989mil|Location2.X=1250.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1242.989mil|Location2.X=1250.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-55(329mil,-705mil) on Multi-Layer And Pad *?-56(235mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1336.989mil|Location2.X=1344.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1336.989mil|Location2.X=1344.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-55(329mil,-705mil) on Multi-Layer And Pad *?-68(423mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1148.989mil|Location2.X=1156.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1148.989mil|Location2.X=1156.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-56(235mil,-705mil) on Multi-Layer And Pad *?-58(141mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1054.989mil|Location2.X=1062.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1054.989mil|Location2.X=1062.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-57(47mil,-705mil) on Multi-Layer And Pad *?-58(141mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1430.989mil|Location2.X=1438.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1430.989mil|Location2.X=1438.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-61(423mil,705mil) on Multi-Layer And Pad *?-62(517mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1524.989mil|Location2.X=1532.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1524.989mil|Location2.X=1532.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-62(517mil,705mil) on Multi-Layer And Pad *?-71(611mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1618.989mil|Location2.X=1626.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1618.989mil|Location2.X=1626.145mil|Location1.Y=1665.989mil|Location2.Y=1673.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-63(705mil,705mil) on Multi-Layer And Pad *?-71(611mil,705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1618.989mil|Location2.Y=1626.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1618.989mil|Location2.Y=1626.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-63(705mil,705mil) on Multi-Layer And Pad *?-72(705mil,611mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1148.989mil|Location2.Y=1156.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1148.989mil|Location2.Y=1156.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-64(705mil,235mil) on Multi-Layer And Pad *?-74(705mil,141mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1242.989mil|Location2.Y=1250.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1242.989mil|Location2.Y=1250.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-64(705mil,235mil) on Multi-Layer And Pad *?-83(705mil,329mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=772.989mil|Location2.Y=780.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=772.989mil|Location2.Y=780.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-65(705mil,-235mil) on Multi-Layer And Pad *?-75(705mil,-141mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=678.989mil|Location2.Y=686.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=678.989mil|Location2.Y=686.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-65(705mil,-235mil) on Multi-Layer And Pad *?-86(705mil,-329mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=302.989mil|Location2.Y=310.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=302.989mil|Location2.Y=310.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-66(705mil,-705mil) on Multi-Layer And Pad *?-77(705mil,-611mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1618.989mil|Location2.X=1626.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1618.989mil|Location2.X=1626.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-66(705mil,-705mil) on Multi-Layer And Pad *?-78(611mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1430.989mil|Location2.X=1438.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1430.989mil|Location2.X=1438.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-67(517mil,-705mil) on Multi-Layer And Pad *?-68(423mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1524.989mil|Location2.X=1532.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1524.989mil|Location2.X=1532.145mil|Location1.Y=255.989mil|Location2.Y=263.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-67(517mil,-705mil) on Multi-Layer And Pad *?-78(611mil,-705mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1524.989mil|Location2.Y=1532.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1524.989mil|Location2.Y=1532.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-72(705mil,611mil) on Multi-Layer And Pad *?-82(705mil,517mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1430.989mil|Location2.Y=1438.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1430.989mil|Location2.Y=1438.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-73(705mil,423mil) on Multi-Layer And Pad *?-82(705mil,517mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1336.989mil|Location2.Y=1344.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1336.989mil|Location2.Y=1344.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-73(705mil,423mil) on Multi-Layer And Pad *?-83(705mil,329mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1054.989mil|Location2.Y=1062.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=1054.989mil|Location2.Y=1062.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-74(705mil,141mil) on Multi-Layer And Pad *?-84(705mil,47mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=866.989mil|Location2.Y=874.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=866.989mil|Location2.Y=874.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-75(705mil,-141mil) on Multi-Layer And Pad *?-85(705mil,-47mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=584.989mil|Location2.Y=592.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=584.989mil|Location2.Y=592.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-76(705mil,-423mil) on Multi-Layer And Pad *?-86(705mil,-329mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=490.989mil|Location2.Y=498.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=490.989mil|Location2.Y=498.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-76(705mil,-423mil) on Multi-Layer And Pad *?-87(705mil,-517mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=396.989mil|Location2.Y=404.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=396.989mil|Location2.Y=404.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-77(705mil,-611mil) on Multi-Layer And Pad *?-87(705mil,-517mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=960.989mil|Location2.Y=968.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1665.989mil|Location2.X=1673.145mil|Location1.Y=960.989mil|Location2.Y=968.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.449mil &lt; 5.906mil) Between Pad *?-84(705mil,47mil) on Multi-Layer And Pad *?-85(705mil,-47mil) on Multi-Layer [Top Solder] Mask Sliver [3.449mil] / [Bottom Solder] Mask Sliver [3.449mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID42QAXWR5CQPTNWU5JHGTX3J4JBPHKICBT1UGLONC1H4QKXWEMYZI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1923.384mil|Location2.X=1934.883mil|Location1.Y=958.817mil|Location2.Y=970.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1923.384mil|Location2.X=1934.883mil|Location1.Y=958.817mil|Location2.Y=970.316mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (964.567mil,-964.567mil)(964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1923.384mil|Location2.X=1934.883mil|Location1.Y=958.818mil|Location2.Y=970.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1923.384mil|Location2.X=1934.883mil|Location1.Y=958.818mil|Location2.Y=970.316mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (964.567mil,-964.567mil)(964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1923.384mil|Location2.X=1934.883mil|Location1.Y=958.817mil|Location2.Y=970.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1923.384mil|Location2.X=1934.883mil|Location1.Y=958.817mil|Location2.Y=970.316mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (964.567mil,-964.567mil)(964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.818mil|Location2.X=970.316mil|Location1.Y=1923.384mil|Location2.Y=1934.883mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.818mil|Location2.X=970.316mil|Location1.Y=1923.384mil|Location2.Y=1934.883mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,964.567mil)(964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.817mil|Location2.X=970.316mil|Location1.Y=1923.384mil|Location2.Y=1934.883mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.817mil|Location2.X=970.316mil|Location1.Y=1923.384mil|Location2.Y=1934.883mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,964.567mil)(964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.817mil|Location2.X=970.316mil|Location1.Y=1923.384mil|Location2.Y=1934.883mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.817mil|Location2.X=970.316mil|Location1.Y=1923.384mil|Location2.Y=1934.883mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,964.567mil)(964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.818mil|Location2.X=970.316mil|Location1.Y=-5.749mil|Location2.Y=5.749mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.818mil|Location2.X=970.316mil|Location1.Y=-5.749mil|Location2.Y=5.749mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(964.567mil,-964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.817mil|Location2.X=970.316mil|Location1.Y=-5.749mil|Location2.Y=5.749mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.817mil|Location2.X=970.316mil|Location1.Y=-5.749mil|Location2.Y=5.749mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(964.567mil,-964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.817mil|Location2.X=970.316mil|Location1.Y=-5.749mil|Location2.Y=5.749mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=958.817mil|Location2.X=970.316mil|Location1.Y=-5.749mil|Location2.Y=5.749mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(964.567mil,-964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=-5.749mil|Location2.X=5.749mil|Location1.Y=958.818mil|Location2.Y=970.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=-5.749mil|Location2.X=5.749mil|Location1.Y=958.818mil|Location2.Y=970.316mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(-964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=-5.749mil|Location2.X=5.749mil|Location1.Y=958.817mil|Location2.Y=970.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=-5.749mil|Location2.X=5.749mil|Location1.Y=958.817mil|Location2.Y=970.316mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(-964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=-5.749mil|Location2.X=5.749mil|Location1.Y=958.817mil|Location2.Y=970.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\gerar\Documents\GitHub\Electrodes\in_vitro\MEA_60_6MIL\MEA_60_6MIL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=-5.749mil|Location2.X=5.749mil|Location1.Y=958.817mil|Location2.Y=970.316mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 15.748mil) Between Board Edge And Track (-964.567mil,-964.567mil)(-964.567mil,964.567mil) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

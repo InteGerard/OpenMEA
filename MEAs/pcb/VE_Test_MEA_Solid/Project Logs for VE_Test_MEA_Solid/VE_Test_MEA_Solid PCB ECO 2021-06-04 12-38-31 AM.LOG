@@ -1,0 +1,4 @@
+Added Net: Name=Net*?_12
+Added Class: Name=VE_Test_MEA_Solid
+Change Room Name: Old Name=Motherboard New Name=VE_Test_MEA_Solid
+Change Room Scope: Old Scope=InComponentClass('Motherboard') New Scope=InComponentClass('VE_Test_MEA_Solid')

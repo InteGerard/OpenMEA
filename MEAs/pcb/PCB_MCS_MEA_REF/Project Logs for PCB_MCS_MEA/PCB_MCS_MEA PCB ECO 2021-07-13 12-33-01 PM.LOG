@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=*? Old Footprint=MCS_MEA_VE_TEST_3MM New Footprint=MCS_MEA_VE_TEST_1P25
+Change Class Name : Old Net Name=VE_Test_MEA_Solid New Net Name=PCB_MCS_MEA
+Change Room Name: Old Name=VE_Test_MEA_Solid New Name=PCB_MCS_MEA
+Change Room Scope: Old Scope=InComponentClass('VE_Test_MEA_Solid') New Scope=InComponentClass('PCB_MCS_MEA')
