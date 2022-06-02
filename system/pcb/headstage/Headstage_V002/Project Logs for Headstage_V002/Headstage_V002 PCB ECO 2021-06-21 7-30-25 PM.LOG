@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=M2_MISOP Pin=J_DIG-17
+Removed Pin From Net: NetName=M2_MISON Pin=J_DIG-18
+Removed Pin From Net: NetName=M2_MOSIP Pin=J_DIG-19
+Removed Pin From Net: NetName=M2_MOSIN Pin=J_DIG-20
+Added Pin To Net: NetName=M2_MOSIP Pin=J_DIG-17
+Added Pin To Net: NetName=M2_MOSIN Pin=J_DIG-18
+Added Pin To Net: NetName=M2_MISOP Pin=J_DIG-19
+Added Pin To Net: NetName=M2_MISON Pin=J_DIG-20

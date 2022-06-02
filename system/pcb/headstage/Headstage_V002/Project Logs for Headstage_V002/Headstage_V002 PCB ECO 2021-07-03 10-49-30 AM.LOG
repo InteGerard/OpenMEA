@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=VREF Pin=M1-23
+Added Pin To Net: NetName=E1_8 Pin=M1-23
+Added Pin To Net: NetName=VREF Pin=M3-21
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R

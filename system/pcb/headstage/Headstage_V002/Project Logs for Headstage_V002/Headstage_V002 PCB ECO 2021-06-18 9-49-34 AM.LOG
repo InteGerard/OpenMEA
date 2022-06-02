@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=VREF Pin=P_VREF-1
+Removed Pin From Net: NetName=VREF Pin=P_VREF_GND-1
+Removed Pin From Net: NetName=GND Pin=P_VREF_GND-2
+Removed Pin From Net: NetName=M14_SCLKN Pin=R_SCLK_M14-1
+Removed Pin From Net: NetName=M14_SCLKP Pin=R_SCLK_M14-2
+Removed Pin From Net: NetName=M23_SCLKN_HDR Pin=R_SCLK_M23-1
+Removed Pin From Net: NetName=M23_SCLKP_HDR Pin=R_SCLK_M23-2
+Removed Pin From Net: NetName=M14_CSN Pin=R_TCS_M14-1
+Removed Pin From Net: NetName=M14_CSP Pin=R_TCS_M14-2
+Removed Pin From Net: NetName=M23_CSN_HDR Pin=R_TCS_M23-1
+Removed Pin From Net: NetName=M23_CSP_HDR Pin=R_TCS_M23-2
+Removed Member From Class: ClassName=Motherboard Member=P_VREF_GND
+Removed Member From Class: ClassName=Motherboard Member=P_VREF
+Removed Member From Class: ClassName=Motherboard Member=R_SCLK_M14
+Removed Member From Class: ClassName=Motherboard Member=R_SCLK_M23
+Removed Member From Class: ClassName=Motherboard Member=R_TCS_M14
+Removed Member From Class: ClassName=Motherboard Member=R_TCS_M23
+Added Pin To Net: NetName=VREF Pin=*-15
+Added Pin To Net: NetName=VREF Pin=M1-23
+Change Class Name : Old Net Name=Motherboard New Net Name=Headstage_V002
+Change Room Name: Old Name=Motherboard New Name=Headstage_V002
+Change Room Scope: Old Scope=InComponentClass('Motherboard') New Scope=InComponentClass('Headstage_V002')

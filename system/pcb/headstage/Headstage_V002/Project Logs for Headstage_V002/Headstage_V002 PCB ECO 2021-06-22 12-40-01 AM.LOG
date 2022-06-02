@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=GND Pin=J_DIG-3
+Removed Pin From Net: NetName=VDD Pin=J_DIG-4
+Added Pin To Net: NetName=VDD Pin=J_DIG-3
+Added Pin To Net: NetName=GND Pin=J_DIG-4
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R

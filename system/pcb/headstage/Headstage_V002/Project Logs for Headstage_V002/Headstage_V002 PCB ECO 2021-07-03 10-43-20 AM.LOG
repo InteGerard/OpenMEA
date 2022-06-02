@@ -1,0 +1,75 @@
+Removed Pin From Net: NetName=VSTIMN Pin=J_DIG-1
+Removed Pin From Net: NetName=VSTIMP Pin=J_DIG-2
+Removed Pin From Net: NetName=VDD Pin=J_DIG-3
+Removed Pin From Net: NetName=GND Pin=J_DIG-4
+Removed Pin From Net: NetName=M1_MISOP Pin=J_DIG-5
+Removed Pin From Net: NetName=M1_MISON Pin=J_DIG-6
+Removed Pin From Net: NetName=M1_MOSIP Pin=J_DIG-7
+Removed Pin From Net: NetName=M1_MOSIN Pin=J_DIG-8
+Removed Pin From Net: NetName=M4_MISOP Pin=J_DIG-9
+Removed Pin From Net: NetName=M4_MISON Pin=J_DIG-10
+Removed Pin From Net: NetName=M4_MOSIP Pin=J_DIG-11
+Removed Pin From Net: NetName=M4_MOSIN Pin=J_DIG-12
+Removed Pin From Net: NetName=M14_SCLKP Pin=J_DIG-13
+Removed Pin From Net: NetName=M14_SCLKN Pin=J_DIG-14
+Removed Pin From Net: NetName=M14_CSP Pin=J_DIG-15
+Removed Pin From Net: NetName=M14_CSN Pin=J_DIG-16
+Removed Pin From Net: NetName=M2_MISOP Pin=J_DIG-17
+Removed Pin From Net: NetName=M2_MISON Pin=J_DIG-18
+Removed Pin From Net: NetName=M2_MOSIP Pin=J_DIG-19
+Removed Pin From Net: NetName=M2_MOSIN Pin=J_DIG-20
+Removed Pin From Net: NetName=M3_MISOP Pin=J_DIG-21
+Removed Pin From Net: NetName=M3_MISON Pin=J_DIG-22
+Removed Pin From Net: NetName=M3_MOSIP Pin=J_DIG-23
+Removed Pin From Net: NetName=M3_MOSIN Pin=J_DIG-24
+Removed Pin From Net: NetName=M23_SCLKP Pin=J_DIG-25
+Removed Pin From Net: NetName=M23_SCLKN Pin=J_DIG-26
+Removed Pin From Net: NetName=M23_CSP Pin=J_DIG-27
+Removed Pin From Net: NetName=M23_CSN Pin=J_DIG-28
+Added Pin To Net: NetName=M23_CSP Pin=J_DIG-1
+Added Pin To Net: NetName=M23_CSN Pin=J_DIG-2
+Added Pin To Net: NetName=M23_SCLKP Pin=J_DIG-3
+Added Pin To Net: NetName=M23_SCLKN Pin=J_DIG-4
+Added Pin To Net: NetName=M3_MOSIP Pin=J_DIG-5
+Added Pin To Net: NetName=M3_MOSIN Pin=J_DIG-6
+Added Pin To Net: NetName=M3_MISOP Pin=J_DIG-7
+Added Pin To Net: NetName=M3_MISON Pin=J_DIG-8
+Added Pin To Net: NetName=M2_MOSIP Pin=J_DIG-9
+Added Pin To Net: NetName=M2_MOSIN Pin=J_DIG-10
+Added Pin To Net: NetName=M2_MISOP Pin=J_DIG-11
+Added Pin To Net: NetName=M2_MISON Pin=J_DIG-12
+Added Pin To Net: NetName=M14_CSP Pin=J_DIG-13
+Added Pin To Net: NetName=M14_CSN Pin=J_DIG-14
+Added Pin To Net: NetName=M14_SCLKP Pin=J_DIG-15
+Added Pin To Net: NetName=M14_SCLKN Pin=J_DIG-16
+Added Pin To Net: NetName=M4_MOSIP Pin=J_DIG-17
+Added Pin To Net: NetName=M4_MOSIN Pin=J_DIG-18
+Added Pin To Net: NetName=M4_MISOP Pin=J_DIG-19
+Added Pin To Net: NetName=M4_MISON Pin=J_DIG-20
+Added Pin To Net: NetName=M1_MOSIP Pin=J_DIG-21
+Added Pin To Net: NetName=M1_MOSIN Pin=J_DIG-22
+Added Pin To Net: NetName=M1_MISOP Pin=J_DIG-23
+Added Pin To Net: NetName=M1_MISON Pin=J_DIG-24
+Added Pin To Net: NetName=VDD Pin=J_DIG-25
+Added Pin To Net: NetName=GND Pin=J_DIG-26
+Added Pin To Net: NetName=VSTIMN Pin=J_DIG-27
+Added Pin To Net: NetName=VSTIMP Pin=J_DIG-28
+Added Net: Name=MISO1h_N
+Added Net: Name=MISO1h_P
+Added Net: Name=MOSI1h_N
+Added Net: Name=MOSI1h_P
+Added Net: Name=nCS1h_N
+Added Net: Name=nCS1h_P
+Added Net: Name=SCLK1h_N
+Added Net: Name=SCLK1h_P
+Added Differential Pair: Name=MISO1h
+Added Differential Pair: Name=MOSI1h
+Added Differential Pair: Name=nCS1h
+Added Differential Pair: Name=SCLK1h
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
+Added Member To Class: ClassName=Headstage_V002 Member=Component MP? S0971-46R
