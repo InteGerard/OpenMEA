@@ -1,0 +1,6 @@
+DRC Rules Export File for PCB: C:\Users\adamg\WORK\NeuronToBrainLaboratory2019\MEA_CLDP\pcb\V003\MEA_CLDP.PcbDoc
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=5.91
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=5.91
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=0.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing|Scope=Board|Minimum=5.91

@@ -1,0 +1,34 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: MEA_CLDP.PcbDoc   2019-07-25  5:05:26 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Copper Layer to Bottom Copper Layer
+ASCII RoundHoles File : MEA_CLDP-RoundHoles.TXT
+ASCII SlotHoles File : MEA_CLDP-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.25mm (10mil)                                            Round             20        PTH        0.00mm (0.00inch)
+T2      0.4mm (16mil)                                             Round             101       PTH        0.00mm (0.00inch)
+T3      0.65mm (26mil)                                            Slot              8         PTH        0.00mm (0.00inch)
+T4      0.711mm (28mil)                                           Round             67        PTH        0.00mm (0.00inch)
+T5      0.8mm (31mil)                                             Round             68        PTH        0.00mm (0.00inch)
+T6      0.889mm (35mil)                                           Round             16        PTH        0.00mm (0.00inch)
+T7      0.89mm (35mil)                                            Round             16        PTH        0.00mm (0.00inch)
+T8      0.9mm (35mil)                                             Round             2         PTH        0.00mm (0.00inch)
+T9      0.9mm (35mil)                                             Slot              24        PTH        0.00mm (0.00inch)
+T10     1.016mm (40mil)                                           Round             72        PTH        0.00mm (0.00inch)
+T11     1.02mm (40mil)                                            Round             149       PTH        0.00mm (0.00inch)
+T12     1.194mm (47mil)                                           Slot              3         PTH        0.00mm (0.00inch)
+T13     1.3mm (51mil)                                             Round             22        PTH        0.00mm (0.00inch)
+T14     1.8mm (71mil)                                             Round             6         PTH        0.00mm (0.00inch)
+T15     2.3mm (91mil)                                             Round             2         PTH        0.00mm (0.00inch)
+T16     2.7mm (106mil)                                            Round             2         PTH        0.00mm (0.00inch)
+T17     3.2mm (126mil)                                            Round             6         PTH        0.00mm (0.00inch)
+T18     0.4mm (16mil)                                             Round             19        NPTH       0.00mm (0.00inch)
+T19     1mm (39mil)                                               Round             4         NPTH       0.00mm (0.00inch)
+T20     3mm (118mil)                                              Round             2         NPTH       0.00mm (0.00inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              609
+
+Total Processing Time (hh:mm:ss) : 00:00:01

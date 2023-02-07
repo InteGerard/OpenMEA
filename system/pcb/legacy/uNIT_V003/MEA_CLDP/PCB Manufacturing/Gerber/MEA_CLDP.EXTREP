@@ -1,0 +1,33 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: MEA_CLDP.GBR   2019-07-25  5:05:25 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GTL                Top Copper Layer                        
+.G1                 Internal Copper Layer 1                 
+.G2                 Internal Copper Layer 2                 
+.GBL                Bottom Copper Layer                     
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GM18               Bottom Adhesive/Glue - M18              
+.GM17               Top Adhesive/Glue - M17                 
+.GM16               Bottom Courtyard - M16                  
+.GM15               Top Courtyard - M15                     
+.GM14               Bottom Fab Assembly - M14               
+.GM13               Top Fab Assembly - M13                  
+.GM12               Mechanical 12                           
+.GM5                Mechanical 5                            
+.GM4                Parent Board Outline - M4               
+.GM3                PCB Info - M3                           
+.GM2                Fab Notes - M2                          
+.GM1                Board Outline - M1                      
+.GCB2               Bottom Coverlay 2                       
+.GCT2               Top Coverlay 2                          
+------------------------------------------------------------------------------------------

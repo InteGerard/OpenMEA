@@ -1,0 +1,145 @@
+Altium Designer Pick and Place Locations
+C:\Users\adamg\WORK\NeuronToBrainLaboratory2019\MEA_CLDP\pcb\V003\Project Outputs\Pick Place\Pick Place for MEA_CLDP.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       25-07-19
+Time:       17:05
+Revision:   6cb69f4c722cd1bc07efcc3850ebd8f1b8201845
+Variant:    No variations
+Units used: mm
+
+Designator  Comment                           Layer       Footprint                                         Center-X(mm) Center-Y(mm) Rotation Description                                                       
+R21         100R                              BottomLayer R0805                                             185.4500     24.7500      180      ERJ-6ENF1000V                                                     
+R23         100R                              BottomLayer R0805                                             181.3501     24.7501      180      ERJ-6ENF1000V                                                     
+R22         100R                              TopLayer    R0805                                             179.8000     24.7500      180      ERJ-6ENF1000V                                                     
+R24         100R                              TopLayer    R0805                                             175.3000     24.7500      180      ERJ-6ENF1000V                                                     
+P29         "Header 6X2A"                     TopLayer    PPPC062LJBN-RC                                    180.1000     20.7300      360      "Header, 6-Pin, Dual row"                                         
+P28         "Header 4H"                       TopLayer    PEC04SBAN                                         184.2500     31.5600      270      "Header, 4-Pin, Right Angle"                                      
+P27         "Header 4H"                       TopLayer    PPTC041LGBN-RC                                    182.2500     31.5600      270      "Header, 4-Pin, Right Angle"                                      
+J6          2001-1-2-21-00-BK                 TopLayer    *CNC_2001-1-2-21-00-BK_2001-1-2-21-00-BK(Primary) 178.5050     41.1250      180      "Mini Hdmi 19p Female Smt"                                        
+R20_A4      0R                                TopLayer    rcl_0402i_1005m_most                              117.7500     26.5000      270      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+R20_A3      0R                                BottomLayer rcl_0402i_1005m_most                              151.7500     26.9300      270      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+R20_A2      0R                                BottomLayer rcl_0402i_1005m_most                              131.7500     27.0000      270      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+R20_A1      0R                                TopLayer    rcl_0402i_1005m_most                              137.7500     26.5000      270      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+C13         capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              64.2500      15.9330      90       "Capacitor Non-polarized American Symbol"                         
+C12         10uF                              TopLayer    C0805                                             67.2500      16.4530      90       "CAP 10UF"                                                        
+VR3_S2      "Tunable 1M Max"                  TopLayer    res_var_5turn                                     86.5200      28.5530      180      "TRIMMER 1M OHM 0.25W J LEAD TOP"                                 
+VR2_S2      "Tunable 1M Max"                  TopLayer    res_var_5turn                                     80.5200      24.0530      180      "TRIMMER 1M OHM 0.25W J LEAD TOP"                                 
+VR1_S2      "Tunable 1M Max"                  TopLayer    res_var_5turn                                     66.9800      28.9530      360      "TRIMMER 1M OHM 0.25W J LEAD TOP"                                 
+U2_S2       "Part Number: ltc3260ide"         TopLayer    DFN-14_DE                                         76.2500      31.0030      180      "IC REG CHARGE PUMP INV 14DFN"                                    
+R13_S2      100KR                             TopLayer    R0805                                             85.8000      24.0030      180      CRCW0805100KFKEA                                                  
+R12_S2      100KR                             TopLayer    R0805                                             71.2500      26.4530      90       CRCW0805100KFKEA                                                  
+P26_S2      "Header 8"                        TopLayer    TE_5-535541-6                                     86.3600      19.0030      180      "Header, 8-Pin"                                                   
+P17         "Header 4"                        TopLayer    OSTVN04A150                                       57.0600      16.5030      360      "Header, 4-Pin"                                                   
+P15_S2      "Header 4"                        TopLayer    OSTVN04A150                                       93.7500      27.2330      270      "Header, 4-Pin"                                                   
+LM1_S2      3.3V                              TopLayer    LM1085                                            58.5250      40.0030      270      LM1085ISX-3.3/NOPB                                                
+C44_S2      1uF                               TopLayer    C0805                                             71.2500      41.5530      90       "CAP 1UF"                                                         
+C11_S2      100uF                             TopLayer    CAP_EEFK_D                                        87.2500      37.6613      270      "CAP 100UF - UPDATE"                                              
+C10_S2      1uF                               TopLayer    C0805                                             76.3000      37.0030      360      "CAP 1UF"                                                         
+C9_S2       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_nominal                           81.2500      29.5730      90       "Capacitor Non-polarized American Symbol"                         
+C8_S2       10uF                              TopLayer    C0805                                             71.2500      33.9530      270      "CAP 10UF"                                                        
+C7_S2       10uF                              TopLayer    C0805                                             81.2500      33.9530      270      "CAP 10UF"                                                        
+C6_S2       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_nominal                           75.1800      26.5030      180      "Capacitor Non-polarized American Symbol"                         
+C5_S2       100uF                             TopLayer    CAP_EEFK_D                                        59.2500      26.9113      90       "CAP 100UF - UPDATE"                                              
+R19         100R                              BottomLayer rcl_0402i_1005m_most                              123.7500     18.5000      180      "RES SMD 100 OHM 1% 1/16W 0402"                                   
+U1_A3       "Intan Technologies RHS2116 chip" BottomLayer QFN44_7_X_7                                       144.7500     24.5000      180      ""                                                                
+L1          Logo                              BottomLayer N2BL_LOGO                                         -55.8290     -20.5920     90       ""                                                                
+P2          "Header 9_male"                   TopLayer    TE_3-644456-9                                     146.1600     73.3230      180      "Header, 9-Pin"                                                   
+U1_A4       "Intan Technologies RHS2116 chip" BottomLayer QFN44_7_X_7                                       124.7500     24.5000      180      ""                                                                
+U1_A2       "Intan Technologies RHS2116 chip" TopLayer    QFN44_7_X_7                                       124.7500     24.5000      360      ""                                                                
+U1_A1       "Intan Technologies RHS2116 chip" TopLayer    QFN44_7_X_7                                       144.7500     24.5000      360      ""                                                                
+R5          100R                              TopLayer    rcl_0402i_1005m_most                              125.7500     18.5000      360      "RES SMD 100 OHM 1% 1/16W 0402"                                   
+R3          100R                              TopLayer    rcl_0402i_1005m_most                              145.7500     18.5000      360      "RES SMD 100 OHM 1% 1/16W 0402"                                   
+POWER_P     PWR2.1MM                          TopLayer    POWER2.1MM                                        63.8856      76.0280      90       PJ-002AH                                                          
+J1          "Connector 68"                    BottomLayer CONN_2-5174339-5_2-5174339-5(Primary)             134.7300     66.6555      360      "Receptacle Header Assemby"                                       
+C2_A4       capacitor_npol_ame                BottomLayer rcl_0402i_1005m_most                              118.7500     19.5000      90       "Capacitor Non-polarized American Symbol"                         
+C2_A3       capacitor_npol_ame                BottomLayer rcl_0402i_1005m_most                              138.7500     19.5000      90       "Capacitor Non-polarized American Symbol"                         
+C2_A2       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              130.7500     19.5000      90       "Capacitor Non-polarized American Symbol"                         
+C2_A1       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              150.7500     19.5000      90       "Capacitor Non-polarized American Symbol"                         
+C3_A4       capacitor_npol_ame                BottomLayer rcl_0402i_1005m_most                              130.7500     19.5000      90       "Capacitor Non-polarized American Symbol"                         
+C3_A2       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              118.7500     19.5000      90       "Capacitor Non-polarized American Symbol"                         
+C3_A1       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              138.7500     19.5000      90       "Capacitor Non-polarized American Symbol"                         
+C4_A4       capacitor_npol_ame                BottomLayer rcl_0402i_1005m_most                              131.7500     24.5000      90       "Capacitor Non-polarized American Symbol"                         
+C4_A2       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              117.7500     24.5000      270      "Capacitor Non-polarized American Symbol"                         
+C4_A1       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              137.7500     24.5000      270      "Capacitor Non-polarized American Symbol"                         
+C1_A4       capacitor_npol_ame                BottomLayer rcl_0402i_1005m_most                              117.7500     21.5000      180      "Capacitor Non-polarized American Symbol"                         
+C1_A3       capacitor_npol_ame                BottomLayer rcl_0402i_1005m_most                              137.7500     21.5000      180      "Capacitor Non-polarized American Symbol"                         
+C1_A2       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              131.7500     21.5000      360      "Capacitor Non-polarized American Symbol"                         
+C1_A1       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_most                              151.7500     21.5000      360      "Capacitor Non-polarized American Symbol"                         
+R9          100R                              BottomLayer rcl_0402i_1005m_most                              143.7500     18.5000      180      "RES SMD 100 OHM 1% 1/16W 0402"                                   
+C4_A3       capacitor_npol_ame                BottomLayer rcl_0402i_1005m_most                              151.7500     24.5000      90       "Capacitor Non-polarized American Symbol"                         
+J2          1747981-2                         BottomLayer TE_1747981-2_1747981-2(Primary)                   145.5000     6.9000       180      "Conn HDMI RCP 19 POS 0.5mm Solder ST SMD 19 Terminal 1 Port T/R" 
+J3          1747981-2                         BottomLayer TE_1747981-2_1747981-2(Primary)                   124.0000     6.9000       180      "Conn HDMI RCP 19 POS 0.5mm Solder ST SMD 19 Terminal 1 Port T/R" 
+L2          Logo                              BottomLayer N2BL_LOGO                                         -55.8290     -20.5920     270      ""                                                                
+P3          "Header 9_male"                   TopLayer    TE_3-644456-9                                     146.1600     77.1330      180      "Header, 9-Pin"                                                   
+P4          "Header 9_male"                   TopLayer    TE_3-644456-9                                     123.3000     73.3230      360      "Header, 9-Pin"                                                   
+P5          "Header 9_male"                   TopLayer    TE_3-644456-9                                     123.3000     77.1330      360      "Header, 9-Pin"                                                   
+P6          "Header 9_male"                   TopLayer    TE_3-644456-9                                     146.1600     80.9430      180      "Header, 9-Pin"                                                   
+P7          "Header 9_male"                   TopLayer    TE_3-644456-9                                     146.1600     84.7530      180      "Header, 9-Pin"                                                   
+P8          "Header 9_male"                   TopLayer    TE_3-644456-9                                     123.3000     80.9430      360      "Header, 9-Pin"                                                   
+P9          "Header 9_male"                   TopLayer    TE_3-644456-9                                     123.3000     84.7530      360      "Header, 9-Pin"                                                   
+P10         "Header 18H"                      TopLayer    PPPC181LFBN-RC                                    134.7300     32.7500      180      "CONN RCPT 18POS 0.1 GOLD PCB"                                    
+P11         "Header 18H"                      TopLayer    PPPC181LFBN-RC                                    134.7300     36.5600      180      "CONN RCPT 18POS 0.1 GOLD PCB"                                    
+P12         "Header 18H"                      TopLayer    PPPC181LFBN-RC                                    134.7300     40.3700      180      "CONN RCPT 18POS 0.1 GOLD PCB"                                    
+P13         "Header 18H"                      TopLayer    PPPC181LFBN-RC                                    134.7300     44.1800      180      "CONN RCPT 18POS 0.1 GOLD PCB"                                    
+C3_A3       capacitor_npol_ame                BottomLayer rcl_0402i_1005m_most                              150.7500     19.5000      90       "Capacitor Non-polarized American Symbol"                         
+R7_A1       0R                                TopLayer    rcl_0402i_1005m_most                              151.7500     23.5000      360      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+R7_A2       0R                                TopLayer    rcl_0402i_1005m_most                              131.7500     23.5000      360      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+R7_A3       0R                                BottomLayer rcl_0402i_1005m_most                              137.7500     23.5000      180      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+R7_A4       0R                                BottomLayer rcl_0402i_1005m_most                              117.7500     23.5000      180      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+J4          0039301060                        TopLayer    0039301060                                        84.6500      79.3030      90       "CONN HEADER R/A 6POS 4.2MM"                                      
+VR3_S1      "Tunable 1M Max"                  TopLayer    res_var_5turn                                     86.5200      54.0530      180      "TRIMMER 1M OHM 0.25W J LEAD TOP"                                 
+VR2_S1      "Tunable 1M Max"                  TopLayer    res_var_5turn                                     80.5200      49.5530      180      "TRIMMER 1M OHM 0.25W J LEAD TOP"                                 
+VR1_S1      "Tunable 1M Max"                  TopLayer    res_var_5turn                                     66.9800      54.4530      360      "TRIMMER 1M OHM 0.25W J LEAD TOP"                                 
+U2_S1       "Part Number: ltc3260ide"         TopLayer    DFN-14_DE                                         76.2500      56.5030      180      "IC REG CHARGE PUMP INV 14DFN"                                    
+R13_S1      100KR                             TopLayer    R0805                                             85.8000      49.5030      180      CRCW0805100KFKEA                                                  
+R12_S1      100KR                             TopLayer    R0805                                             71.2500      51.9530      90       CRCW0805100KFKEA                                                  
+P26_S1      "Header 8"                        TopLayer    TE_5-535541-6                                     86.3600      44.5030      180      "Header, 8-Pin"                                                   
+P15_S1      "Header 4"                        TopLayer    OSTVN04A150                                       93.7500      52.7330      270      "Header, 4-Pin"                                                   
+LM1_S1      3.3V                              TopLayer    LM1085                                            58.5250      65.5030      270      LM1085ISX-3.3/NOPB                                                
+C44_S1      1uF                               TopLayer    C0805                                             71.2500      67.0530      90       "CAP 1UF"                                                         
+C11_S1      100uF                             TopLayer    CAP_EEFK_D                                        87.2500      63.1613      270      "CAP 100UF - UPDATE"                                              
+C10_S1      1uF                               TopLayer    C0805                                             76.3000      62.5030      360      "CAP 1UF"                                                         
+C9_S1       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_nominal                           81.2500      55.0730      90       "Capacitor Non-polarized American Symbol"                         
+C8_S1       10uF                              TopLayer    C0805                                             71.2500      59.4530      270      "CAP 10UF"                                                        
+C7_S1       10uF                              TopLayer    C0805                                             81.2500      59.4530      270      "CAP 10UF"                                                        
+C6_S1       capacitor_npol_ame                TopLayer    rcl_0402i_1005m_nominal                           75.1800      52.0030      180      "Capacitor Non-polarized American Symbol"                         
+C5_S1       100uF                             TopLayer    CAP_EEFK_D                                        59.2500      52.4113      90       "CAP 100UF - UPDATE"                                              
+P18         "Header 4"                        BottomLayer OSTVN04A150                                       106.7500     19.3100      90       "Header, 4-Pin"                                                   
+R18         100R                              BottomLayer R0805                                             181.3000     66.2500      180      ERJ-6ENF1000V                                                     
+R17         100R                              TopLayer    R0805                                             175.3000     66.2500      180      ERJ-6ENF1000V                                                     
+R8          100R                              TopLayer    R0805                                             179.8000     66.2500      180      ERJ-6ENF1000V                                                     
+R4          100R                              BottomLayer R0805                                             185.4500     66.2500      180      ERJ-6ENF1000V                                                     
+P16         "Header 4H"                       TopLayer    PEC04SBAN                                         184.2500     73.0600      270      "Header, 4-Pin, Right Angle"                                      
+P14         "Header 6X2A"                     TopLayer    PPPC062LJBN-RC                                    180.1000     62.2300      360      "Header, 6-Pin, Dual row"                                         
+P1          "Header 4H"                       TopLayer    PPTC041LGBN-RC                                    182.2500     73.0600      270      "Header, 4-Pin, Right Angle"                                      
+J13         2001-1-2-21-00-BK                 TopLayer    *CNC_2001-1-2-21-00-BK_2001-1-2-21-00-BK(Primary) 178.5050     82.6250      180      "Mini Hdmi 19p Female Smt"                                        
+L3          Logo                              TopLayer    N2BL_LOGO                                         -55.8290     -20.5920     180      ""                                                                
+JP1         01x02                             TopLayer    HDR1X2                                            150.0200     59.0030      360      "01X02 generic terminal connector"                                
+R25         0R                                TopLayer    rcl_0402i_1005m_most                              162.7500     73.7530      270      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+R26         0R                                TopLayer    rcl_0402i_1005m_most                              106.7500     73.7530      270      "RES SMD 0 OHM JUMPER 1/16W 0402"                                 
+P20         "Header 8X2"                      BottomLayer TE_534998-8                                       32.3850      84.4550      360      "Header, 8-Pin, Dual row"                                         
+P23         "Header 6X2"                      TopLayer    0010897120                                        42.4180      70.7390      90       "Header, 6-Pin, Dual row"                                         
+P25         "Header 4"                        TopLayer    OSTVN04A150                                       41.6560      15.1130      270      "Header, 4-Pin"                                                   
+R14         0                                 TopLayer    R0805                                             30.0990      71.5620      90       RC0805JR-070RL                                                    
+R10         0                                 TopLayer    R0805                                             26.9240      71.5620      90       RC0805JR-070RL                                                    
+R2          0                                 TopLayer    R0805                                             27.0510      48.7020      270      RC0805JR-070RL                                                    
+R1          0                                 TopLayer    R0805                                             30.4800      48.7070      270      RC0805JR-070RL                                                    
+R16         0                                 TopLayer    R0805                                             30.3530      16.9520      270      RC0805JR-070RL                                                    
+R15         0                                 TopLayer    R0805                                             27.1780      16.9520      270      RC0805JR-070RL                                                    
+R11         0                                 TopLayer    R0805                                             27.5590      33.8480      90       RC0805JR-070RL                                                    
+R6          0                                 TopLayer    R0805                                             30.7340      33.8480      90       RC0805JR-070RL                                                    
+J10         1747981-2                         TopLayer    TE_1747981-2_1747981-2(Primary)                   7.6870       75.9460      270      "Conn HDMI RCP 19 POS 0.5mm Solder ST SMD 19 Terminal 1 Port T/R" 
+J9          1747981-2                         TopLayer    TE_1747981-2_1747981-2(Primary)                   7.6870       55.9647      270      "Conn HDMI RCP 19 POS 0.5mm Solder ST SMD 19 Terminal 1 Port T/R" 
+J8          1747981-2                         TopLayer    TE_1747981-2_1747981-2(Primary)                   7.6870       35.9833      270      "Conn HDMI RCP 19 POS 0.5mm Solder ST SMD 19 Terminal 1 Port T/R" 
+U3          SN65LVDT388ADBT                   TopLayer    DBT0038A_N                                        28.9270      26.5830      360      "IC OCTAL LVDS RECEIVER 38-TSSOP"                                 
+P22         "Header 6X2"                      TopLayer    0010897120                                        42.4180      38.9890      90       "Header, 6-Pin, Dual row"                                         
+P21         "Header 6X2"                      TopLayer    0010897120                                        42.4180      54.2290      90       "Header, 6-Pin, Dual row"                                         
+U4          "Part Number: sn75lvds387_dgg_64" TopLayer    DGG64                                             28.6893      60.0040      180      "16-Channel LVDS Transmitter"                                     
+J7          1747981-2                         TopLayer    TE_1747981-2_1747981-2(Primary)                   7.6870       16.0020      270      "Conn HDMI RCP 19 POS 0.5mm Solder ST SMD 19 Terminal 1 Port T/R" 
+P30         "Header 2"                        TopLayer    OSTVN02A150                                       41.6560      6.0960       90       "Header, 2-Pin"                                                   
+L2_1        Logo                              TopLayer    N2BL_LOGO                                         -55.8290     -20.5920     0        ""                                                                
+Designator1 Comment                           TopLayer    M2X0.4_Plated_Loose_Fit                           4.3180       4.1910       0        ""                                                                
+Designator2 Comment                           TopLayer    M2X0.4_Plated_Loose_Fit                           54.4410      83.1820      270      ""                                                                
