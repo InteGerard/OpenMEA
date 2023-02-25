@@ -1,0 +1,13 @@
+Importer Log Report
+Project : RHS2000.PrjPcb
+
+Section : Analyze Document - C:\Users\adamg\Documents\NeuronToBrainLabratory\MEA_CLDP\pcb\libraries\RHS2000.lbr
+    Analyzing data of C:\Users\adamg\Documents\NeuronToBrainLabratory\MEA_CLDP\pcb\libraries\RHS2000.lbr
+    Load settings
+    Load layers 71
+    Load Library library
+    Load Library ""
+    Load Packages 6
+    Load Symbols 4
+    Load DeviceSets 5
+EndSection

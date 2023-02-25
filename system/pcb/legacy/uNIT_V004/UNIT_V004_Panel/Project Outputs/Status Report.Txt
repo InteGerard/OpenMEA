@@ -1,0 +1,10 @@
+Output: Bill of Materials
+Type  : BOM
+From  : Variant [[No Variations]] of Project [UNIT_V004_Panel1.PrjPcb]
+   Generated File[Bill of Materials-UNIT_V004_Panel1.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:18:27 PM On 2020-11-26

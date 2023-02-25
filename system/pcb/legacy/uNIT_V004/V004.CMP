@@ -1,0 +1,15 @@
+Component   : POGO_PINS
+PCB Library : V004.PcbLib
+Date        : 2020-11-02
+Time        : 5:53:07 PM
+
+
+
+Dimension : 1.948 x 1.948 in
+
+ Layer(s)              Pads(s)  Tracks(s)  Fill(s)  Arc(s)  Text(s)
+--------------------------------------------------------------------
+ Multi Layer                60          0        0       0        0
+ Top Overlay                 0          4        0       0        0
+--------------------------------------------------------------------
+ Total                      60          4        0       0        0

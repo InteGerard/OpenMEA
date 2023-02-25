@@ -1,0 +1,36 @@
+PCAD Importer Log
+Project : 2007435-1.LibPkg
+
+Section : C:\Users\adamg\WORK\NeuronToBrainLaboratory2019\MEA_CLDP\pcb\libraries\te_connectivity\snapEDA\2007435-1\2007435-1.lia
+    Section : PCB Library - 2007435-1.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 167
+            Warning - 1 : Skipping Token 2007435-1 On Line 232
+            Warning - 1 : Skipping Token attachedSymbol On Line 482
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [*TE_2007435-1][Primary] associated with PCAD Component [2007435-1] has been renamed to PCB FootPrint [*TE_2007435-1_2007435-1(Primary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - 2007435-1.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token padStyleDef On Line 33
+            Warning - 1 : Skipping Token padStyleDef On Line 44
+            Warning - 1 : Skipping Token padStyleDef On Line 56
+            Warning - 1 : Skipping Token multiLayer On Line 131
+            Warning - 1 : Skipping Token layerContents On Line 158
+            Warning - 1 : Skipping Token layerContents On Line 169
+            Warning - 1 : Skipping Token layerContents On Line 178
+            Warning - 1 : Skipping Token layerContents On Line 212
+            Warning - 1 : Skipping Token layerContents On Line 221
+        EndSection
+
+        Section : Generating SCH Library - 2007435-1.SchLib
+            Warning - 0 : PCAD Pattern Graphics [*TE_2007435-1][Primary] associated with PCAD Component [2007435-1] has been renamed to PCB FootPrint [*TE_2007435-1_2007435-1(Primary)].
+        EndSection
+    EndSection
+EndSection

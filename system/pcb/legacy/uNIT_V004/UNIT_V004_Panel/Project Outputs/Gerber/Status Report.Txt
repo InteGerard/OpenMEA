@@ -1,0 +1,44 @@
+Source PCB Design UNIT_V004_Panel1.PcbDoc contains embedded board array. It is recomended to generate individual BOM for each embedded board PCB design.
+
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [UNIT_V004_Panel1.PrjPcb]
+   Generated File[UNIT_V004_Panel1.GTO]
+   Generated File[UNIT_V004_Panel1.GTP]
+   Generated File[UNIT_V004_Panel1.GTS]
+   Generated File[UNIT_V004_Panel1.GTL]
+   Generated File[UNIT_V004_Panel1.G1]
+   Generated File[UNIT_V004_Panel1.GBL]
+   Generated File[UNIT_V004_Panel1.GBS]
+   Generated File[UNIT_V004_Panel1.GBP]
+   Generated File[UNIT_V004_Panel1.GBO]
+   Generated File[UNIT_V004_Panel1.G2]
+   Generated File[UNIT_V004_Panel1.GM1]
+   Generated File[UNIT_V004_Panel1.GM2]
+   Generated File[UNIT_V004_Panel1.GM3]
+   Generated File[UNIT_V004_Panel1.GM4]
+   Generated File[UNIT_V004_Panel1.GM5]
+   Generated File[UNIT_V004_Panel1.GM21]
+   Generated File[UNIT_V004_Panel1.GM6]
+   Generated File[UNIT_V004_Panel1.GM12]
+   Generated File[UNIT_V004_Panel1.GM13]
+   Generated File[UNIT_V004_Panel1.GM15]
+   Generated File[UNIT_V004_Panel1.GM16]
+   Generated File[UNIT_V004_Panel1.GM17]
+   Generated File[UNIT_V004_Panel1.GM23]
+   Generated File[UNIT_V004_Panel1.GM24]
+   Generated File[UNIT_V004_Panel1.GM7]
+   Generated File[UNIT_V004_Panel1.GM14]
+   Generated File[UNIT_V004_Panel1.GM20]
+   Generated File[UNIT_V004_Panel1.GKO]
+   Generated File[UNIT_V004_Panel1.GPT]
+   Generated File[UNIT_V004_Panel1.GPB]
+   Generated File[UNIT_V004_Panel1.RUL]
+   Generated File[UNIT_V004_Panel1.EXTREP]
+   Generated File[UNIT_V004_Panel1.REP]
+
+
+Files Generated   : 33
+Documents Printed : 0
+
+Finished Output Generation At 12:32:03 AM On 2020-11-27

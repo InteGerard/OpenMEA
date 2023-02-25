@@ -1,0 +1,29 @@
+PCAD Importer Log
+Project : 87832-1420.LibPkg
+
+Section : C:\Users\adamg\WORK\N2BL_20191\MEA_CLDP\pcb\libraries\molex_JTAG\snapEDA\87832-1420\87832-1420.lia
+    Section : PCB Library - 87832-1420.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token 87832-1420 On Line 138
+            Warning - 1 : Skipping Token attachedSymbol On Line 348
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 87832-1420.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token multiLayer On Line 95
+            Warning - 1 : Skipping Token layerContents On Line 113
+            Warning - 1 : Skipping Token layerContents On Line 119
+            Warning - 1 : Skipping Token layerContents On Line 125
+            Warning - 1 : Skipping Token layerContents On Line 130
+        EndSection
+
+        Section : Generating SCH Library - 87832-1420.SchLib
+        EndSection
+    EndSection
+EndSection

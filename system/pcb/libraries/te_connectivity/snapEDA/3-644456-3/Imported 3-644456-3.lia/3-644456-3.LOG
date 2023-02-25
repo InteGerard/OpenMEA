@@ -1,0 +1,29 @@
+PCAD Importer Log
+Project : 3-644456-3.LibPkg
+
+Section : C:\Users\adamg\WORK\NeuronToBrainLaboratory2019\MEA_CLDP\pcb\libraries\te_connectivity\snapEDA\3-644456-3\3-644456-3.lia
+    Section : PCB Library - 3-644456-3.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token 3-644456-3 On Line 134
+            Warning - 1 : Skipping Token attachedSymbol On Line 184
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 3-644456-3.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token multiLayer On Line 96
+            Warning - 1 : Skipping Token layerContents On Line 101
+            Warning - 1 : Skipping Token layerContents On Line 108
+            Warning - 1 : Skipping Token layerContents On Line 117
+            Warning - 1 : Skipping Token layerContents On Line 126
+        EndSection
+
+        Section : Generating SCH Library - 3-644456-3.SchLib
+        EndSection
+    EndSection
+EndSection

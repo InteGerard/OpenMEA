@@ -1,0 +1,71 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc
+Date     : 2020-11-16
+Time     : 3:00:35 PM
+
+Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=2.953mil) (Max=1968.504mil) (Preferred=5.906mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=5.906mil) (Conductor Width=2.953mil) (Air Gap=2.953mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=3.937mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=3.937mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10.827mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=2.953mil) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (2.937mil < 2.953mil) Between Pad C1A-1(610mil,355mil) on Top Copper Layer And Via (585mil,395mil) from Top Copper Layer to Bottom Copper Layer [Top Solder] Mask Sliver [2.937mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (2.008mil < 2.953mil) Between Pad C5A-2(616.535mil,415mil) on Top Copper Layer And Via (585mil,395mil) from Top Copper Layer to Bottom Copper Layer [Top Solder] Mask Sliver [2.008mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.453mil < 2.953mil) Between Pad J2A-16(620.158mil,585mil) on Multi-Layer And Pad J2A-17(659.98mil,585mil) on Multi-Layer [Top Solder] Mask Sliver [0.453mil] / [Bottom Solder] Mask Sliver [0.453mil]
+Rule Violations :3
+
+Processing Rule : Silk To Solder Mask (Clearance=5.906mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (3.825mil < 5.906mil) Between Pad C2A-2(540mil,190mil) on Top Copper Layer And Text "C2A" (559.995mil,85mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.825mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5.906mil) Between Pad U1A-37(386.26mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5.906mil) Between Pad U1A-38(366.58mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5.906mil) Between Pad U1A-39(346.89mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5.906mil) Between Pad U1A-40(327.2mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5.906mil) Between Pad U1A-41(307.52mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+Rule Violations :6
+
+Processing Rule : Silk to Silk (Clearance=5.906mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (3.069mil < 5.906mil) Between Text "C4A" (144.995mil,465.008mil) on Top Overlay And Track (10.827mil,554.488mil)(719.508mil,554.488mil) on Top Overlay Silk Text to Silk Clearance [3.069mil]
+   Violation between Silk To Silk Clearance Constraint: (5.031mil < 5.906mil) Between Text "RE0A" (679.995mil,120.018mil) on Top Overlay And Text "RE1A" (679.995mil,240.013mil) on Top Overlay Silk Text to Silk Clearance [5.031mil]
+Rule Violations :2
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+   Violation between Board Outline Clearance(Outline Edge): (0mil < 9.842mil) Between Board Edge And Text "GO'L
+2020" (610mil,5mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (5.459mil < 9.842mil) Between Board Edge And Text "J2A" (10.459mil,510.005mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (6.556mil < 9.842mil) Between Board Edge And Track (10.827mil,554.488mil)(719.508mil,554.488mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (0.552mil < 9.842mil) Between Board Edge And Track (10.827mil,615.512mil)(719.508mil,615.512mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (1.378mil < 9.842mil) Between Board Edge And Track (129.163mil,5.315mil)(601.604mil,5.315mil) on Top Overlay 
+Rule Violations :5
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 16
+Waived Violations : 0
+Time Elapsed        : 00:00:02

@@ -1,0 +1,33 @@
+PCAD Importer Log
+Project : 2001-1-2-21-00-BK.LibPkg
+
+Section : C:\Users\adamg\WORK\NeuronToBrainLaboratory2019\MEA_CLDP\pcb\libraries\cnc\snapEDA\2001-1-2-21-00-BK\2001-1-2-21-00-BK.lia
+    Section : PCB Library - 2001-1-2-21-00-BK.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token 2001-1-2-21-00-BK On Line 202
+            Warning - 1 : Skipping Token attachedSymbol On Line 459
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [*CNC_2001-1-2-21-00-BK][Primary] associated with PCAD Component [2001-1-2-21-00-BK] has been renamed to PCB FootPrint [*CNC_2001-1-2-21-00-BK_2001-1-2-21-00-BK(Primary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - 2001-1-2-21-00-BK.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token padStyleDef On Line 32
+            Warning - 1 : Skipping Token multiLayer On Line 107
+            Warning - 1 : Skipping Token layerContents On Line 134
+            Warning - 1 : Skipping Token layerContents On Line 142
+            Warning - 1 : Skipping Token layerContents On Line 148
+            Warning - 1 : Skipping Token layerContents On Line 157
+            Warning - 1 : Skipping Token layerContents On Line 166
+        EndSection
+
+        Section : Generating SCH Library - 2001-1-2-21-00-BK.SchLib
+            Warning - 0 : PCAD Pattern Graphics [*CNC_2001-1-2-21-00-BK][Primary] associated with PCAD Component [2001-1-2-21-00-BK] has been renamed to PCB FootPrint [*CNC_2001-1-2-21-00-BK_2001-1-2-21-00-BK(Primary)].
+        EndSection
+    EndSection
+EndSection

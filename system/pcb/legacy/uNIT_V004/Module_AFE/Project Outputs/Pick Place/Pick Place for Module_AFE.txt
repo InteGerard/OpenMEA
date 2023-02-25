@@ -1,0 +1,26 @@
+Altium Designer Pick and Place Locations
+C:\Users\ISML\Documents\GitHub\ANIMO\pcb\ANIMO_V001\Module_AFE\Project Outputs\Pick Place\Pick Place for Module_AFE.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       14-09-20
+Time:       15:30
+Revision:   76da34939f69145431c45c419cd6f568adacddb3
+Variant:    No variations
+Units used: mm
+
+Designator Comment                           Layer    Footprint             Center-X(mm) Center-Y(mm) Rotation Description                                                                                       
+J2         1mm_18pin                         TopLayer 1mm_18pin             9.2693       14.8590      90       ""                                                                                                
+R6         CRCW06030000Z0EAHP                TopLayer RESC1609X55X30NL10T20 1.9050       11.4300      90       ""                                                                                                
+R3         CRCW0603100RFKEA                  TopLayer RESC1609X50X30ML8T20  9.3980       2.6670       0        "Chip Resistor, 100 Ohm, +/- 1%, 100 mW,-55 to 155 degC, 0603 (1608 Metric), RoHS, Tape and Ree"  
+R5         CRCW06030000Z0EAHP                TopLayer RESC1609X55X30NL10T20 15.4940      5.2970       90       ""                                                                                                
+R4         CRCW06030000Z0EAHP                TopLayer RESC1609X55X30NL10T20 15.4940      6.7480       90       ""                                                                                                
+J1         1mm_12pin                         TopLayer 1mm_12pin             9.2693       0.9100       90       ""                                                                                                
+R2         CRCW0603100RFKEA                  TopLayer RESC1609X50X30ML8T20  12.0650      2.6670       0        "Chip Resistor, 100 Ohm, +/- 1%, 100 mW,-55 to 155 degC, 0603 (1608 Metric), RoHS, Tape and Ree"  
+R1         CRCW0603100RFKEA                  TopLayer RESC1609X50X30ML8T20  6.7310       2.6670       0        "Chip Resistor, 100 Ohm, +/- 1%, 100 mW,-55 to 155 degC, 0603 (1608 Metric), RoHS, Tape and Ree"  
+U1         "Intan Technologies RHS2116 chip" TopLayer QFN44_7_X_7           8.8110       9.0170       0        ""                                                                                                
+C4         GRM188R71H104KA93D                TopLayer CAPC1608X90X35ML10T15 3.3020       10.2870      270      "Chip Capacitor, 0.1 uF, +/- 10%, 50 V, -55 to 125 degC, 0603 (1608 Metric), RoHS, Tape and Reel" 
+C3         GRM188R71H104KA93D                TopLayer CAPC1608X90X35ML10T15 3.3020       7.6200       90       "Chip Capacitor, 0.1 uF, +/- 10%, 50 V, -55 to 125 degC, 0603 (1608 Metric), RoHS, Tape and Reel" 
+C2         GRM188R71H103KA01D                TopLayer CAPC1608X90X35ML10T15 13.7160      5.5510       270      "Chip Capacitor, 10 nF, +/- 10%, 50 V, -55 to 125 degC, 0603 (1608 Metric), RoHS, Tape and Reel"  
+C1         GRM188R71H104KA93D                TopLayer CAPC1608X90X35ML10T15 14.7690      9.0170       180      "Chip Capacitor, 0.1 uF, +/- 10%, 50 V, -55 to 125 degC, 0603 (1608 Metric), RoHS, Tape and Reel" 

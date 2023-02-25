@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\work\BreakoutBoards\BRK7360-PCB\BRK7360.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=brk7360-plated.txt|DrillLayers=gtl,gp1,gp2,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=brk7360-nonplated.txt|DrillLayers=gtl,gp1,gp2,gbl

@@ -1,0 +1,34 @@
+PCAD Importer Log
+Project : 2-5174339-5.LibPkg
+
+Section : C:\Users\adamg\WORK\NeuronToBrainLaboratory2019\MEA_CLDP\pcb\libraries\te_connectivity_dsub_connectors\snapEDA\2-5174339-5\2-5174339-5.lia
+    Section : PCB Library - 2-5174339-5.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token 2-5174339-5_SECTION1 On Line 218
+            Warning - 1 : Skipping Token 2-5174339-5_SECTION2 On Line 533
+            Warning - 1 : Skipping Token attachedSymbol On Line 927
+            Warning - 1 : Skipping Token attachedSymbol On Line 928
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [*CONN_2-5174339-5][Primary] associated with PCAD Component [2-5174339-5] has been renamed to PCB FootPrint [*CONN_2-5174339-5_2-5174339-5(Primary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - 2-5174339-5.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token padStyleDef On Line 32
+            Warning - 1 : Skipping Token multiLayer On Line 107
+            Warning - 1 : Skipping Token layerContents On Line 179
+            Warning - 1 : Skipping Token layerContents On Line 186
+            Warning - 1 : Skipping Token layerContents On Line 192
+            Warning - 1 : Skipping Token layerContents On Line 204
+        EndSection
+
+        Section : Generating SCH Library - 2-5174339-5.SchLib
+            Warning - 0 : PCAD Pattern Graphics [*CONN_2-5174339-5][Primary] associated with PCAD Component [2-5174339-5] has been renamed to PCB FootPrint [*CONN_2-5174339-5_2-5174339-5(Primary)].
+        EndSection
+    EndSection
+EndSection

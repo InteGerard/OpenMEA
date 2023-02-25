@@ -1,0 +1,256 @@
+*************************************************************
+FileName = Module_AFE.GBR
+AutoAperture = True
+*************************************************************
+Generating : Bottom Solder
+      File : Module_AFE.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D26
+    D27
+    D28
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : Module_AFE.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : Module_AFE.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 17
+      File : Module_AFE.GM17
+
+    Adding Layer      : Mechanical 17
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : Module_AFE.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Top Courtyard
+      File : Module_AFE.GM15
+
+    Adding Layer      : Top Courtyard
+
+
+Used DCodes :
+    D39
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Layer 1
+      File : Module_AFE.G1
+
+    Adding Layer      : Layer 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D32
+    D33
+    D34
+    D36
+    D37
+*************************************************************
+
+*************************************************************
+Generating : Top Component Center
+      File : Module_AFE.GM16
+
+    Adding Layer      : Top Component Center
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 12
+      File : Module_AFE.GM12
+
+    Adding Layer      : Mechanical 12
+
+
+Used DCodes :
+    D38
+*************************************************************
+
+*************************************************************
+Generating : Top 3D Body
+      File : Module_AFE.GM13
+
+    Adding Layer      : Top 3D Body
+
+
+Used DCodes :
+    D39
+*************************************************************
+
+*************************************************************
+Generating : Bottom Assembly
+      File : Module_AFE.GM4
+
+    Adding Layer      : Bottom Assembly
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Module_AFE.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D32
+    D33
+    D34
+    D35
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : Module_AFE.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Module_AFE.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Module_AFE.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Module_AFE.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 2
+      File : Module_AFE.GM2
+
+    Adding Layer      : Mechanical 2
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Top Assembly
+      File : Module_AFE.GM3
+
+    Adding Layer      : Top Assembly
+
+
+Used DCodes :
+*************************************************************
+

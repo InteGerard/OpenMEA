@@ -1,0 +1,27 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: Module_AFE.GBR   2020-09-14  3:29:57 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GTL                Top Layer                               
+.G1                 Layer 1                                 
+.GBL                Bottom Layer                            
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GM1                Mechanical 1                            
+.GM2                Mechanical 2                            
+.GM3                Top Assembly                            
+.GM4                Bottom Assembly                         
+.GM12               Mechanical 12                           
+.GM13               Top 3D Body                             
+.GM15               Top Courtyard                           
+.GM16               Top Component Center                    
+.GM17               Mechanical 17                           
+------------------------------------------------------------------------------------------

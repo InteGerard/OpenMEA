@@ -1,0 +1,7 @@
+DRC Rules Export File for PCB: C:\work\BreakoutBoards\BRK7360-PCB\BRK7360.PcbDoc
+RuleKind=Width|RuleName=okxWidthDiff100ohm|Scope=Board|Minimum=9.50
+RuleKind=Width|RuleName=okWidth50ohm|Scope=Board|Minimum=12.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=5.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=5.00

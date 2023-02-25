@@ -1,0 +1,308 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Motherboard\Motherboard.PcbDoc
+Date     : 2020-11-16
+Time     : 3:33:41 PM
+
+Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=5.906mil) (Max=1968.504mil) (Preferred=5.906mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=9.842mil) (Conductor Width=5.906mil) (Air Gap=5.906mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=5.906mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=9.842mil) (Max=15.748mil) (All)
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-12(1825mil,4037mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-13(1825mil,3849mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-14(1825mil,3567mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-15(1825mil,3473mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-16(1825mil,3191mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-17(1825mil,3003mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-21(1919mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-22(1825mil,4131mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-23(1825mil,3943mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-24(1825mil,3661mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-25(1825mil,3379mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-26(1825mil,3097mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-27(1825mil,2909mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-28(1919mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-31(2107mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-32(2013mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-33(1825mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-34(1825mil,3755mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-35(1825mil,3285mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-36(1825mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-37(2013mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-38(2107mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-41(2389mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-42(2483mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-43(2295mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-44(2201mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-45(2201mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-46(2295mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-47(2483mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-48(2389mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-51(2671mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-52(2577mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-53(2765mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-54(2859mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-55(2859mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-56(2765mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-57(2577mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-58(2671mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-61(2953mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-62(3047mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-63(3235mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-64(3235mil,3755mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-65(3235mil,3285mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-66(3235mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-67(3047mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-68(2953mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-71(3141mil,4225mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-72(3235mil,4131mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-73(3235mil,3943mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-74(3235mil,3661mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-75(3235mil,3379mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-76(3235mil,3097mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-77(3235mil,2909mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-78(3141mil,2815mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-82(3235mil,4037mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-83(3235mil,3849mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-84(3235mil,3567mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-85(3235mil,3473mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-86(3235mil,3191mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (29mil > 15.748mil) Pad *-87(3235mil,3003mil) on Multi-Layer Actual Hole Size = 29mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-1(609.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-10(1009.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-11(1109.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-12(1109.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-13(1209.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-14(1209.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-15(1309.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-16(1309.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-17(1409.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-18(1409.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-19(1509.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-2(609.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-20(1509.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-21(1609.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-22(1609.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-23(1709.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-24(1709.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-25(1809.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-26(1809.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-27(1909.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-28(1909.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-3(709.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-4(709.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-5(809.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-6(809.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-7(909.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-8(909.842mil,187.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (43.307mil > 15.748mil) Pad J_DIG-9(1009.842mil,87.795mil) on Multi-Layer Actual Hole Size = 43.307mil
+   Violation between Hole Size Constraint: (51.181mil > 15.748mil) Pad J_PWR-1(3456.299mil,325mil) on Multi-Layer Actual Hole Size = 51.181mil
+   Violation between Hole Size Constraint: (51.181mil > 15.748mil) Pad J_PWR-2(3653.15mil,325mil) on Multi-Layer Actual Hole Size = 51.181mil
+   Violation between Hole Size Constraint: (51.181mil > 15.748mil) Pad J_PWR-3(3850mil,325mil) on Multi-Layer Actual Hole Size = 51.181mil
+   Violation between Hole Size Constraint: (51.181mil > 15.748mil) Pad J_PWR-4(4046.85mil,325mil) on Multi-Layer Actual Hole Size = 51.181mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-1(755.413mil,3736.083mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-10(755.413mil,3381.752mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-11(755.413mil,3343.287mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-12(755.413mil,3303.917mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-13(1304.587mil,3854.419mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-14(1304.587mil,3815.049mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-15(1304.587mil,3775.679mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-16(1304.587mil,3736.309mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-17(1304.587mil,3696.939mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-18(1304.587mil,3657.569mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-19(1304.587mil,3618.199mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-2(755.413mil,3696.713mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-20(1304.587mil,3578.829mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-21(1304.587mil,3539.459mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-22(1304.587mil,3500.088mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-23(1304.587mil,3461.624mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-24(1304.587mil,3422.254mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-25(1304.587mil,3382.884mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-26(1304.587mil,3343.514mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-27(1304.587mil,3304.144mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-28(1304.587mil,3264.773mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-29(1304.587mil,3224.951mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-3(755.413mil,3657.342mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-30(1304.587mil,3185.581mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-4(755.413mil,3617.972mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-5(755.413mil,3578.602mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-6(755.413mil,3539.232mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-7(755.413mil,3499.862mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-8(755.413mil,3460.492mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M1-9(755.413mil,3421.122mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-1(2313.917mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-10(2668.248mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-11(2706.713mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-12(2746.083mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-13(2195.581mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-14(2234.951mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-15(2274.321mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-16(2313.691mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-17(2353.061mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-18(2392.431mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-19(2431.801mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-2(2353.287mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-20(2471.171mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-21(2510.541mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-22(2549.912mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-23(2588.376mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-24(2627.746mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-25(2667.116mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-26(2706.486mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-27(2745.856mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-28(2785.227mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-29(2825.049mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-3(2392.658mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-30(2864.419mil,2294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-4(2432.028mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-5(2471.398mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-6(2510.768mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-7(2550.138mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-8(2589.508mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M2-9(2628.878mil,1745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-1(4304.587mil,3303.917mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-10(4304.587mil,3658.248mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-11(4304.587mil,3696.713mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-12(4304.587mil,3736.083mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-13(3755.413mil,3185.581mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-14(3755.413mil,3224.951mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-15(3755.413mil,3264.321mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-16(3755.413mil,3303.691mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-17(3755.413mil,3343.061mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-18(3755.413mil,3382.431mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-19(3755.413mil,3421.801mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-2(4304.587mil,3343.287mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-20(3755.413mil,3461.171mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-21(3755.413mil,3500.541mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-22(3755.413mil,3539.912mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-23(3755.413mil,3578.376mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-24(3755.413mil,3617.746mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-25(3755.413mil,3657.116mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-26(3755.413mil,3696.486mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-27(3755.413mil,3735.856mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-28(3755.413mil,3775.227mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-29(3755.413mil,3815.049mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-3(4304.587mil,3382.658mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-30(3755.413mil,3854.419mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-4(4304.587mil,3422.028mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-5(4304.587mil,3461.398mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-6(4304.587mil,3500.768mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-7(4304.587mil,3540.138mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-8(4304.587mil,3579.508mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M3-9(4304.587mil,3618.878mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-1(2746.083mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-10(2391.752mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-11(2353.287mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-12(2313.917mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-13(2864.419mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-14(2825.049mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-15(2785.679mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-16(2746.309mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-17(2706.939mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-18(2667.569mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-19(2628.199mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-2(2706.713mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-20(2588.829mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-21(2549.459mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-22(2510.088mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-23(2471.624mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-24(2432.254mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-25(2392.884mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-26(2353.514mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-27(2314.144mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-28(2274.773mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-29(2234.951mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-3(2667.342mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-30(2195.581mil,4745.413mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-4(2627.972mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-5(2588.602mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-6(2549.232mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-7(2509.862mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-8(2470.492mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (19.685mil > 15.748mil) Pad M4-9(2431.122mil,5294.587mil) on Multi-Layer Actual Hole Size = 19.685mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_CSN-1(1815mil,1060mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_CSN-2(1915mil,1060mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_CSN-3(2015mil,1060mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_CSP-1(1815mil,951.667mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_CSP-2(1915mil,951.667mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_CSP-3(2015mil,951.667mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_SCLKN-1(1815mil,843.333mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_SCLKN-2(1915mil,843.333mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_SCLKN-3(2015mil,843.333mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_SCLKP-1(1815mil,735mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_SCLKP-2(1915mil,735mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (35mil > 15.748mil) Pad P_SCLKP-3(2015mil,735mil) on Multi-Layer Actual Hole Size = 35mil
+   Violation between Hole Size Constraint: (40.157mil > 15.748mil) Pad P_VREF_GND-1(1245mil,4010mil) on Multi-Layer Actual Hole Size = 40.157mil
+   Violation between Hole Size Constraint: (40.157mil > 15.748mil) Pad P_VREF_GND-2(1145mil,4010mil) on Multi-Layer Actual Hole Size = 40.157mil
+   Violation between Hole Size Constraint: (40.157mil > 15.748mil) Pad P_VREF-1(1245mil,4120mil) on Multi-Layer Actual Hole Size = 40.157mil
+   Violation between Hole Size Constraint: (40.157mil > 15.748mil) Pad P_VREF-2(1345mil,4120mil) on Multi-Layer Actual Hole Size = 40.157mil
+   Violation between Hole Size Constraint: (236.22mil > 15.748mil) Via (196.85mil,5721.221mil) from Top Copper Layer to Bottom Copper Layer Actual Hole Size = 236.22mil
+   Violation between Hole Size Constraint: (236.22mil > 15.748mil) Via (196.85mil,669.095mil) from Top Copper Layer to Bottom Copper Layer Actual Hole Size = 236.22mil
+   Violation between Hole Size Constraint: (236.22mil > 15.748mil) Via (2527.559mil,669.095mil) from Top Copper Layer to Bottom Copper Layer Actual Hole Size = 236.22mil
+   Violation between Hole Size Constraint: (236.22mil > 15.748mil) Via (4858.268mil,5721.221mil) from Top Copper Layer to Bottom Copper Layer Actual Hole Size = 236.22mil
+   Violation between Hole Size Constraint: (236.22mil > 15.748mil) Via (4858.268mil,669.095mil) from Top Copper Layer to Bottom Copper Layer Actual Hole Size = 236.22mil
+Rule Violations :233
+
+Processing Rule : Hole To Hole Clearance (Gap=17.716mil) (All),(All)
+   Violation between Hole To Hole Clearance Constraint: (16.553mil < 17.716mil) Between Via (2704.961mil,5828.604mil) from Top Copper Layer to Bottom Copper Layer And Via (2705mil,5855mil) from Top Copper Layer to Bottom Copper Layer 
+   Violation between Hole To Hole Clearance Constraint: (15.174mil < 17.716mil) Between Via (340.906mil,1345mil) from Top Copper Layer to Bottom Copper Layer And Via (340mil,1370mil) from Top Copper Layer to Bottom Copper Layer 
+   Violation between Hole To Hole Clearance Constraint: (15.158mil < 17.716mil) Between Via (446.811mil,1338.189mil) from Top Copper Layer to Bottom Copper Layer And Via (446.811mil,1363.189mil) from Top Copper Layer to Bottom Copper Layer 
+   Violation between Hole To Hole Clearance Constraint: (15.158mil < 17.716mil) Between Via (4730mil,3385mil) from Top Copper Layer to Bottom Copper Layer And Via (4755mil,3385mil) from Top Copper Layer to Bottom Copper Layer 
+Rule Violations :4
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=5.906mil) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (1.536mil < 5.906mil) Between Via (2395mil,1290mil) from Top Copper Layer to Bottom Copper Layer And Via (2395mil,1325mil) from Top Copper Layer to Bottom Copper Layer [Top Solder] Mask Sliver [1.536mil] / [Bottom Solder] Mask Sliver [1.536mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.547mil < 5.906mil) Between Via (340mil,3655mil) from Top Copper Layer to Bottom Copper Layer And Via (375mil,3655.905mil) from Top Copper Layer to Bottom Copper Layer [Top Solder] Mask Sliver [1.547mil] / [Bottom Solder] Mask Sliver [1.547mil]
+Rule Violations :2
+
+Processing Rule : Silk To Solder Mask (Clearance=7.874mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (7.471mil < 7.874mil) Between Pad J_DIG-23(1709.842mil,87.795mil) on Multi-Layer And Text "J_DIG" (1750.837mil,223.79mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.471mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.864mil < 7.874mil) Between Pad J_DIG-24(1709.842mil,187.795mil) on Multi-Layer And Text "J_DIG" (1750.837mil,223.79mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.864mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 7.874mil) Between Pad J_DIG-25(1809.842mil,87.795mil) on Multi-Layer And Text "J_DIG" (1750.837mil,223.79mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.235mil < 7.874mil) Between Pad J_DIG-26(1809.842mil,187.795mil) on Multi-Layer And Text "J_DIG" (1750.837mil,223.79mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.235mil]
+Rule Violations :4
+
+Processing Rule : Silk to Silk (Clearance=7.874mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (7.798mil < 7.874mil) Between Region (3 hole(s)) Top Overlay And Text "Brain" (3918.189mil,5742.323mil) on Top Overlay Silk Text to Silk Clearance [7.798mil]
+   Violation between Silk To Silk Clearance Constraint: (4.044mil < 7.874mil) Between Region (3 hole(s)) Top Overlay And Text "LABORATORY" (3376.85mil,5683.268mil) on Top Overlay Silk Text to Silk Clearance [4.044mil]
+   Violation between Silk To Silk Clearance Constraint: (6.942mil < 7.874mil) Between Region (3 hole(s)) Top Overlay And Text "Neuron" (3376.85mil,5742.323mil) on Top Overlay Silk Text to Silk Clearance [6.942mil]
+   Violation between Silk To Silk Clearance Constraint: (7.669mil < 7.874mil) Between Region (6 hole(s)) Top Overlay And Text "Neuron" (3376.85mil,5742.323mil) on Top Overlay Silk Text to Silk Clearance [7.669mil]
+   Violation between Silk To Silk Clearance Constraint: (7.687mil < 7.874mil) Between Text "1" (525.984mil,66.929mil) on Top Overlay And Track (553.937mil,34.843mil)(553.937mil,240.748mil) on Top Overlay Silk Text to Silk Clearance [7.687mil]
+   Violation between Silk To Silk Clearance Constraint: (6.169mil < 7.874mil) Between Text "2" (514.173mil,173.228mil) on Top Overlay And Track (553.937mil,34.843mil)(553.937mil,240.748mil) on Top Overlay Silk Text to Silk Clearance [6.169mil]
+   Violation between Silk To Silk Clearance Constraint: (5.268mil < 7.874mil) Between Text "27" (1977.953mil,66.929mil) on Top Overlay And Track (1965.748mil,34.843mil)(1965.748mil,240.748mil) on Top Overlay Silk Text to Silk Clearance [5.268mil]
+   Violation between Silk To Silk Clearance Constraint: (5.268mil < 7.874mil) Between Text "28" (1977.953mil,173.228mil) on Top Overlay And Track (1965.748mil,34.843mil)(1965.748mil,240.748mil) on Top Overlay Silk Text to Silk Clearance [5.268mil]
+Rule Violations :8
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Room Motherboard (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (Disabled)(InComponentClass('Motherboard'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 251
+Waived Violations : 0
+Time Elapsed        : 00:00:03

@@ -1,0 +1,33 @@
+PCAD Importer Log
+Project : 1747981-2.LibPkg
+
+Section : C:\Users\adamg\WORK\N2BL_20191\MEA_CLDP\pcb\libraries\te_connectivity_hdmi\snapEDA\1747981-2\1747981-2.lia
+    Section : PCB Library - 1747981-2.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token 1747981-2 On Line 195
+            Warning - 1 : Skipping Token attachedSymbol On Line 455
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [*TE_1747981-2][Primary] associated with PCAD Component [1747981-2] has been renamed to PCB FootPrint [*TE_1747981-2_1747981-2(Primary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - 1747981-2.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token padStyleDef On Line 33
+            Warning - 1 : Skipping Token multiLayer On Line 108
+            Warning - 1 : Skipping Token layerContents On Line 133
+            Warning - 1 : Skipping Token layerContents On Line 139
+            Warning - 1 : Skipping Token layerContents On Line 149
+            Warning - 1 : Skipping Token layerContents On Line 175
+            Warning - 1 : Skipping Token layerContents On Line 184
+        EndSection
+
+        Section : Generating SCH Library - 1747981-2.SchLib
+            Warning - 0 : PCAD Pattern Graphics [*TE_1747981-2][Primary] associated with PCAD Component [1747981-2] has been renamed to PCB FootPrint [*TE_1747981-2_1747981-2(Primary)].
+        EndSection
+    EndSection
+EndSection

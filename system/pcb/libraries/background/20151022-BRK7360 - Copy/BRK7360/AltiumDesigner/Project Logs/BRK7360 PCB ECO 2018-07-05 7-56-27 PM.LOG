@@ -1,0 +1,6 @@
+Removed Member From Class: ClassName=MC2 Member=R28
+Removed Member From Class: ClassName=MC2 Member=TP6
+Added Member To Class: ClassName=Top Member=Component MC1 QTH-090-01-F-D-A
+Added Member To Class: ClassName=Top Member=Component MC2 QTH-090-01-F-D-A
+Added Member To Class: ClassName=Top Member=Component R28 CRCW06030000Z0EA
+Added Member To Class: ClassName=Top Member=Component TP6 VCCBATT

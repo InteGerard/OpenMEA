@@ -1,0 +1,397 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2020-11-16</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3:00:35 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc" class="file"><acronym title="C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc">C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">16</td></tr>
+</table>
+</td>
+</table><a name="IDCJTD04OYHNWNCAUZNCJYHR33BG1ZHBJAQCFTZ0N33J50BVHD1NBP"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4OP1XMWHD5ZLB33VUIFWD2JTLL2GOIABVXVBCUH4QVOGDXYU40CK">Clearance Constraint (Gap=4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIV2ETL2LFZBZCXK3V0CVEVKNUHIQDC0FNR0IAYJX1Z54XWM5NQSC">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2H45KOHE2OPRFLSKHLUBQCEDXKZGIJ5HGNNPCFBQ5CG53SLOITUO">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBFOFN33PYFIWEEKVHZRWU3B3LLHXB1M2D4U1JOC3WR1PXOWYV4OC">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIBNKSTLJWLF1OIFSYCC42XQO3PGO11LITN0ASXECBJEJQXJ0I3UM">Width Constraint (Min=2.953mil) (Max=1968.504mil) (Preferred=5.906mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFFFEADZF3BD4DPXPXVZGKI0E2JGCBDY2DKIE5KZWNW5Z0ANDFVM">Power Plane Connect Rule(Relief Connect )(Expansion=5.906mil) (Conductor Width=2.953mil) (Air Gap=2.953mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL1GGGTSGN0NTER1KWEEJEIBLFGVBJO4JVCSM2NF0I3KET2JHUQDC">Minimum Annular Ring (Minimum=3.937mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4IP1BQDTGAD1DOIKVSOJ2YLMQNH5AL1IVKKRNPOUW1JRWND21HKO">Hole Size Constraint (Min=3.937mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHT51T3YFAAKODPKYXMRANCLQYPBQPBWFZPPWL2E01W5RS2P40JPC">Hole To Hole Clearance (Gap=10.827mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJLRUDGCDOCDCLU2J23NVAHTGPECVYU312HWDB5BBVW0RNE1SC5SE">Minimum Solder Mask Sliver (Gap=2.953mil) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPNFKHBWDNBHHGWJFHJHO4RJJONRC0PHHJUUY0UI1O2RBKHSOQ4KN">Silk To Solder Mask (Clearance=5.906mil) (IsPad),(All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQBAPBZXT3H13GSRIRCDLFZNCXDDQBTKMWFPUN3LF50YYK0ZPPNNN">Silk to Silk (Clearance=5.906mil) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHI35GMXDHLN0LEMQ3N0XNWL0NFY2V4203QW4PZHVTSQF0YPOK4JM">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID31DVTU2LDESAFXOBDY5DW4XZBNWYCDFEJ5N2OFG5O44GSV3XDRKC">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBOBDGORQEZOZMKSGOLYQGRCEJDMO1GBPLM5RZ2PX2YWVOZ3GEQ2P">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">16</td>
+</tr>
+</table><br><a name="IDJLRUDGCDOCDCLU2J23NVAHTGPECVYU312HWDB5BBVW0RNE1SC5SE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=2.953mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=585.951mil|Location2.X=590.154mil|Location1.Y=377.959mil|Location2.Y=382.162mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=585.951mil|Location2.X=590.154mil|Location1.Y=377.959mil|Location2.Y=382.162mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.937mil &lt; 2.953mil) Between Pad C1A-1(610mil,355mil) on Top Copper Layer And Via (585mil,395mil) from Top Copper Layer to Bottom Copper Layer [Top Solder] Mask Sliver [2.937mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=597.682mil|Location2.X=601.885mil|Location1.Y=392.899mil|Location2.Y=397.101mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=597.682mil|Location2.X=601.885mil|Location1.Y=392.899mil|Location2.Y=397.101mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.008mil &lt; 2.953mil) Between Pad C5A-2(616.535mil,415mil) on Top Copper Layer And Via (585mil,395mil) from Top Copper Layer to Bottom Copper Layer [Top Solder] Mask Sliver [2.008mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=637.967mil|Location2.X=642.17mil|Location1.Y=582.899mil|Location2.Y=587.101mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=637.967mil|Location2.X=642.17mil|Location1.Y=582.899mil|Location2.Y=587.101mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.453mil &lt; 2.953mil) Between Pad J2A-16(620.158mil,585mil) on Multi-Layer And Pad J2A-17(659.98mil,585mil) on Multi-Layer [Top Solder] Mask Sliver [0.453mil] / [Bottom Solder] Mask Sliver [0.453mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDPNFKHBWDNBHHGWJFHJHO4RJJONRC0PHHJUUY0UI1O2RBKHSOQ4KN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=5.906mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=536.424mil|Location2.X=543.579mil|Location1.Y=165.809mil|Location2.Y=172.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=536.424mil|Location2.X=543.579mil|Location1.Y=165.809mil|Location2.Y=172.964mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.825mil &lt; 5.906mil) Between Pad C2A-2(540mil,190mil) on Top Copper Layer And Text "C2A" (559.995mil,85mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.825mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=381.909mil|Location2.X=386.846mil|Location1.Y=502.536mil|Location2.Y=507.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=381.909mil|Location2.X=386.846mil|Location1.Y=502.536mil|Location2.Y=507.473mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 5.906mil) Between Pad U1A-37(386.26mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=361.916mil|Location2.X=366.853mil|Location1.Y=502.536mil|Location2.Y=507.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=361.916mil|Location2.X=366.853mil|Location1.Y=502.536mil|Location2.Y=507.473mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 5.906mil) Between Pad U1A-38(366.58mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=346.921mil|Location2.X=351.858mil|Location1.Y=502.536mil|Location2.Y=507.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=346.921mil|Location2.X=351.858mil|Location1.Y=502.536mil|Location2.Y=507.473mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 5.906mil) Between Pad U1A-39(346.89mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=321.929mil|Location2.X=326.866mil|Location1.Y=502.536mil|Location2.Y=507.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=321.929mil|Location2.X=326.866mil|Location1.Y=502.536mil|Location2.Y=507.473mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 5.906mil) Between Pad U1A-40(327.2mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=306.933mil|Location2.X=311.87mil|Location1.Y=507.535mil|Location2.Y=512.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=306.933mil|Location2.X=311.87mil|Location1.Y=507.535mil|Location2.Y=512.472mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 5.906mil) Between Pad U1A-41(307.52mil,494.76mil) on Top Copper Layer And Text "U1A" (309.402mil,505.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQBAPBZXT3H13GSRIRCDLFZNCXDDQBTKMWFPUN3LF50YYK0ZPPNNN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=5.906mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=121.424mil|Location2.X=128.579mil|Location1.Y=545.439mil|Location2.Y=552.594mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=121.424mil|Location2.X=128.579mil|Location1.Y=545.439mil|Location2.Y=552.594mil|Absolute=True">Silk To Silk Clearance Constraint: (3.069mil &lt; 5.906mil) Between Text "C4A" (144.995mil,465.008mil) on Top Overlay And Track (10.827mil,554.488mil)(719.508mil,554.488mil) on Top Overlay Silk Text to Silk Clearance [3.069mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=656.424mil|Location2.X=663.579mil|Location1.Y=231.42mil|Location2.Y=238.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=656.424mil|Location2.X=663.579mil|Location1.Y=231.42mil|Location2.Y=238.575mil|Absolute=True">Silk To Silk Clearance Constraint: (5.031mil &lt; 5.906mil) Between Text "RE0A" (679.995mil,120.018mil) on Top Overlay And Text "RE1A" (679.995mil,240.013mil) on Top Overlay Silk Text to Silk Clearance [5.031mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID31DVTU2LDESAFXOBDY5DW4XZBNWYCDFEJ5N2OFG5O44GSV3XDRKC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=724.454mil|Location2.X=735.546mil|Location1.Y=-0.546mil|Location2.Y=10.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=724.454mil|Location2.X=735.546mil|Location1.Y=-0.546mil|Location2.Y=10.546mil|Absolute=True">Board Outline Clearance(Outline Edge): (0mil &lt; 9.842mil) Between Board Edge And Text "GO'L
+2020" (610mil,5mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=-2.817mil|Location2.X=8.275mil|Location1.Y=499.459mil|Location2.Y=510.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=-2.817mil|Location2.X=8.275mil|Location1.Y=499.459mil|Location2.Y=510.551mil|Absolute=True">Board Outline Clearance(Outline Edge): (5.459mil &lt; 9.842mil) Between Board Edge And Text "J2A" (10.459mil,510.005mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=721.176mil|Location2.X=732.269mil|Location1.Y=548.942mil|Location2.Y=560.034mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=721.176mil|Location2.X=732.269mil|Location1.Y=548.942mil|Location2.Y=560.034mil|Absolute=True">Board Outline Clearance(Outline Edge): (6.556mil &lt; 9.842mil) Between Board Edge And Track (10.827mil,554.488mil)(719.508mil,554.488mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5.28mil|Location2.X=16.373mil|Location1.Y=614.178mil|Location2.Y=625.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5.28mil|Location2.X=16.373mil|Location1.Y=614.178mil|Location2.Y=625.271mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.552mil &lt; 9.842mil) Between Board Edge And Track (10.827mil,615.512mil)(719.508mil,615.512mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=123.617mil|Location2.X=134.709mil|Location1.Y=-4.857mil|Location2.Y=6.235mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\ISML\Documents\GitHub\MEA_CLDP\pcb\V004\Module_AFE\Module_AFE.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=123.617mil|Location2.X=134.709mil|Location1.Y=-4.857mil|Location2.Y=6.235mil|Absolute=True">Board Outline Clearance(Outline Edge): (1.378mil &lt; 9.842mil) Between Board Edge And Track (129.163mil,5.315mil)(601.604mil,5.315mil) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

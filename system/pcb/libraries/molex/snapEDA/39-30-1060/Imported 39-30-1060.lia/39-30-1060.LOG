@@ -1,0 +1,33 @@
+PCAD Importer Log
+Project : 39-30-1060.LibPkg
+
+Section : C:\Users\adamg\WORK\NeuronToBrainLaboratory2019\MEA_CLDP\pcb\libraries\molex\snapEDA\39-30-1060\39-30-1060.lia
+    Section : PCB Library - 39-30-1060.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token 39-30-1060 On Line 165
+            Warning - 1 : Skipping Token attachedSymbol On Line 258
+        EndSection
+
+        Section : Import Messages
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+        EndSection
+    EndSection
+
+    Section : SCH Library - 39-30-1060.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 71
+            Warning - 1 : Skipping Token multiLayer On Line 145
+            Warning - 1 : Skipping Token layerContents On Line 155
+            Warning - 1 : Skipping Token layerContents On Line 159
+        EndSection
+
+        Section : Generating SCH Library - 39-30-1060.SchLib
+        EndSection
+    EndSection
+EndSection
