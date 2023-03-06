@@ -49,23 +49,6 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=MEA_60_6MIL.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=0
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=CCLEMCLX
-
-[Document2]
 DocumentPath=MEA_60_6MIL.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -81,6 +64,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KVPHTUAI
+
+[Document2]
+DocumentPath=MEA_60_6MIL.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=0
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=CCLEMCLX
 
 [Document3]
 DocumentPath=MEA_60_6MIL.OutJob
@@ -99,129 +99,39 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs\BOM\Bill of Materials-MEA_60_6MIL.csv
+[Document4]
+DocumentPath=..\common\OpenMEA.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
 DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=WWCPKPIG
 
-[GeneratedDocument2]
-DocumentPath=Project Outputs\Gerber\Headstage.GBL
+[Document5]
+DocumentPath=..\common\OpenMEA.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
 DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs\Gerber\Headstage.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs\Gerber\Headstage.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs\Gerber\Headstage.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs\Gerber\Headstage.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs\Gerber\Headstage.GM2
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs\Gerber\Headstage.GM13
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs\Gerber\Headstage.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs\Gerber\Headstage.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs\NC Drill\MEA_60_6MIL.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.G1
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.G2
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument19]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GM
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GM2
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GM13
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument25]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument26]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument27]
-DocumentPath=Project Outputs\NC Drill\MEA_60_6MIL.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument28]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.REP
-DItemRevisionGUID=
-
-[GeneratedDocument29]
-DocumentPath=Project Outputs\Gerber\MEA_60_6MIL.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument30]
-DocumentPath=Project Outputs\NC Drill\MEA_60_6MIL.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument31]
-DocumentPath=Project Outputs\Pick Place\Pick Place for MEA_60_6MIL.csv
-DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=LEIJYAHM
 
 [SearchPath1]
 Path=..\..\..\..\isml_altium_common\pcb_libraries\*.*
@@ -1045,36 +955,6 @@ OutputName12=Web Review Data
 OutputDocumentPath12=
 OutputVariantName12=
 OutputDefault12=0
-OutputType13=Ansoft Neutral
-OutputName13=Ansoft Neutral (AutoPCB)
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-OutputType14=HyperLynx
-OutputName14=HyperLynx (AutoPCB)
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=Orcad v7 Capture Design
-OutputName15=Orcad v7 Capture Design (AutoSCH)
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
-OutputType16=P-CAD ASCII
-OutputName16=P-CAD ASCII (AutoPCB)
-OutputDocumentPath16=
-OutputVariantName16=
-OutputDefault16=0
-OutputType17=P-CAD V16 Schematic Design
-OutputName17=P-CAD V16 Schematic Design (AutoSCH)
-OutputDocumentPath17=
-OutputVariantName17=
-OutputDefault17=0
-OutputType18=SiSoft
-OutputName18=SiSoft (AutoPCB)
-OutputDocumentPath18=
-OutputVariantName18=
-OutputDefault18=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
