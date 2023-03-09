@@ -17,7 +17,7 @@ RevisionNamingSchemeGUID=
 [OutputGroup1]
 Name=Headstage_Mainboard.OutJob
 Description=
-TargetOutputMedium=3d_step
+TargetOutputMedium=fabrication_files
 VariantName=[No Variations]
 VariantScope=1
 CurrentConfigurationName=
@@ -154,7 +154,7 @@ OutputName5=Generates pick and place files
 OutputCategory5=Assembly
 OutputDocumentPath5=
 OutputVariantName5=
-OutputEnabled5=0
+OutputEnabled5=1
 OutputEnabled5_OutputMedium1=0
 OutputEnabled5_OutputMedium2=0
 OutputEnabled5_OutputMedium3=0
@@ -162,13 +162,13 @@ OutputEnabled5_OutputMedium4=3
 OutputEnabled5_OutputMedium5=0
 OutputDefault5=0
 Configuration5_Name1=OutputConfigurationParameter1
-Configuration5_Item1=Record=PickPlaceView|Units=Metric|GenerateCSVFormat=True|GenerateTextFormat=False|ShowUnits=False|Separator=.|ExcludeFilterParam=False|IncludeVariations=False|IncludeStandardNoBOM=False|Filter= |FilterActive=False|YFlip=False|DifferentFootprints=False|Column#1=Name:Designator,Fixed:True,Metric:False,Visible:True,Sort:Ascending,SortIndex:0,Position:0|Column#2=Name:Comment,Fixed:True,Metric:False,Visible:True,Sort:None,Position:1|Column#3=Name:Layer,Fixed:True,Metric:False,Visible:True,Sort:None,Position:2|Column#4=Name:Footprint,Fixed:True,Metric:False,Visible:True,Sort:None,Position:3|Column#5=Name:Footprint Description,Fixed:True,Metric:False,Visible:False,Sort:None,Position:4|Column#6=Name:Center-X,Fixed:True,Metric:True,Visible:True,Sort:None,Position:5|Column#7=Name:Center-Y,Fixed:True,Metric:True,Visible:True,Sort:None,Position:6|Column#8=Name:Rotation,Fixed:True,Metric:False,Visible:True,Sort:None,Position:7|Column#9=Name:Description,Fixed:True,Metric:False,Visible:True,Sort:None,Position:8|Column#10=Name:ComponentKind,Fixed:True,Metric:False,Visible:False,Sort:None,Position:9|Column#11=Name:Height,Fixed:True,Metric:True,Visible:False,Sort:None,Position:10|Column#12=Name:Ref-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:11|Column#13=Name:Ref-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:12|Column#14=Name:Pad-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:13|Column#15=Name:Pad-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:14|Column#16=Name:Variation,Fixed:True,Metric:False,Visible:False,Sort:None,Position:15|Column#17=Name:Manufacturer,Fixed:False,Metric:False,Visible:False,Sort:None,Position:16,Type:0|Column#18=Name:Conn Orientation,Fixed:False,Metric:False,Visible:False,Sort:None,Position:21,Type:0|Column#19=Name:Package Reference,Fixed:False,Metric:False,Visible:False,Sort:None,Position:47,Type:0|Column#20=Name:Temperature,Fixed:False,Metric:False,Visible:False,Sort:None,Position:60,Type:0|Column#21=Name:Pitch,Fixed:False,Metric:False,Visible:False,Sort:None,Position:55,Type:0|Column#22=Name:Datasheet Version,Fixed:False,Metric:False,Visible:False,Sort:None,Position:26,Type:0|Column#23=Name:Part Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:52,Type:0|Column#24=Name:Package URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:48,Type:0|Column#25=Name:Category,Fixed:False,Metric:False,Visible:False,Sort:None,Position:18,Type:0|Column#26=Name:Manufacturer URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:36,Type:0|Column#27=Name:No. of Positions,Fixed:False,Metric:False,Visible:False,Sort:None,Position:39,Type:0|Column#28=Name:Packaging,Fixed:False,Metric:False,Visible:False,Sort:None,Position:50,Type:0|Column#29=Name:Mounting Technology,Fixed:False,Metric:False,Visible:False,Sort:None,Position:37,Type:0|Column#30=Name:Gender,Fixed:False,Metric:False,Visible:False,Sort:None,Position:31,Type:0|Column#31=Name:Digikey Description,Fixed:False,Metric:False,Visible:False,Sort:None,Position:30,Type:0|Column#32=Name:Device Class L2,Fixed:False,Metric:False,Visible:False,Sort:None,Position:28,Type:0|Column#33=Name:Octopart,Fixed:False,Metric:False,Visible:False,Sort:None,Position:42,Type:0|Column#34=Name:Packing,Fixed:False,Metric:False,Visible:False,Sort:None,Position:51,Type:0|Column#35=Name:Working Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:65,Type:0|Column#36=Name:Temperature Range High,Fixed:False,Metric:False,Visible:False,Sort:None,Position:61,Type:0|Column#37=Name:ComponentLink2URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:20,Type:0|Column#38=Name:Number Of Contacts,Fixed:False,Metric:False,Visible:False,Sort:None,Position:41,Type:0|Column#39=Name:Is Female,Fixed:False,Metric:False,Visible:False,Sort:None,Position:33,Type:0|Column#40=Name:Orientation,Fixed:False,Metric:False,Visible:False,Sort:None,Position:44,Type:0|Column#41=Name:Contact Resistance,Fixed:False,Metric:False,Visible:False,Sort:None,Position:23,Type:0|Column#42=Name:Package Version,Fixed:False,Metric:False,Visible:False,Sort:None,Position:49,Type:0|Column#43=Name:RoHS,Fixed:False,Metric:False,Visible:False,Sort:None,Position:58,Type:0|Column#44=Name:PartNumber,Fixed:False,Metric:False,Visible:False,Sort:None,Position:53,Type:0|Column#45=Name:Current Rating,Fixed:False,Metric:False,Visible:False,Sort:None,Position:24,Type:0|Column#46=Name:Device Class L3,Fixed:False,Metric:False,Visible:False,Sort:None,Position:29,Type:0|Column#47=Name:ComponentLink2Description,Fixed:False,Metric:False,Visible:False,Sort:None,Position:19,Type:0|Column#48=Name:Lead Free,Fixed:False,Metric:False,Visible:False,Sort:None,Position:34,Type:0|Column#49=Name:Datasheet URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:25,Type:0|Column#50=Name:Device Class L1,Fixed:False,Metric:False,Visible:False,Sort:None,Position:27,Type:0|Column#51=Name:Mouser Description,Fixed:False,Metric:False,Visible:False,Sort:None,Position:38,Type:0|Column#52=Name:Rated Current,Fixed:False,Metric:False,Visible:False,Sort:None,Position:57,Type:0|Column#53=Name:Temperature Range Low,Fixed:False,Metric:False,Visible:False,Sort:None,Position:62,Type:0|Column#54=Name:Package,Fixed:False,Metric:False,Visible:False,Sort:None,Position:45,Type:0|Column#55=Name:Contact Material,Fixed:False,Metric:False,Visible:False,Sort:None,Position:22,Type:0|Column#56=Name:Automotive,Fixed:False,Metric:False,Visible:False,Sort:None,Position:17,Type:0|Column#57=Name:Row Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:59,Type:0|Column#58=Name:Publisher,Fixed:False,Metric:False,Visible:False,Sort:None,Position:56,Type:0|Column#59=Name:Package Description,Fixed:False,Metric:False,Visible:False,Sort:None,Position:46,Type:0|Column#60=Name:Voltage Rating,Fixed:False,Metric:False,Visible:False,Sort:None,Position:63,Type:0|Column#61=Name:No. of Rows,Fixed:False,Metric:False,Visible:False,Sort:None,Position:40,Type:0|Column#62=Name:Withstanding Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:64,Type:0|Column#63=Name:Height,Fixed:False,Metric:False,Visible:False,Sort:None,Position:32,Type:0|Column#64=Name:Pin Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:54,Type:0|Column#65=Name:Operating Temperature,Fixed:False,Metric:False,Visible:False,Sort:None,Position:43,Type:0|Column#66=Name:Manufacturer Part Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:35,Type:0|DocumentPath=C:\Users\bruno\Documents\GitHub\ECE2500\OpenMEA\Headstage\Headstage.PcbDoc
+Configuration5_Item1=Record=PickPlaceView|Units=Metric|GenerateCSVFormat=True|GenerateTextFormat=False|ShowUnits=False|Separator=.|ExcludeFilterParam=False|IncludeVariations=False|IncludeStandardNoBOM=False|Filter= |FilterActive=False|YFlip=False|DifferentFootprints=False|Column#1=Name:Designator,Fixed:True,Metric:False,Visible:True,Sort:Ascending,SortIndex:0,Position:0|Column#2=Name:Comment,Fixed:True,Metric:False,Visible:True,Sort:None,Position:1|Column#3=Name:Layer,Fixed:True,Metric:False,Visible:True,Sort:None,Position:3|Column#4=Name:Footprint,Fixed:True,Metric:False,Visible:False,Sort:None,Position:4|Column#5=Name:Footprint Description,Fixed:True,Metric:False,Visible:False,Sort:None,Position:5|Column#6=Name:Center-X,Fixed:True,Metric:True,Visible:True,Sort:None,Position:6|Column#7=Name:Center-Y,Fixed:True,Metric:True,Visible:True,Sort:None,Position:7|Column#8=Name:Rotation,Fixed:True,Metric:False,Visible:True,Sort:None,Position:8|Column#9=Name:Description,Fixed:True,Metric:False,Visible:True,Sort:None,Position:2|Column#10=Name:ComponentKind,Fixed:True,Metric:False,Visible:False,Sort:None,Position:9|Column#11=Name:Height,Fixed:True,Metric:True,Visible:False,Sort:None,Position:10|Column#12=Name:Ref-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:11|Column#13=Name:Ref-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:12|Column#14=Name:Pad-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:13|Column#15=Name:Pad-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:14|Column#16=Name:Variation,Fixed:True,Metric:False,Visible:False,Sort:None,Position:15|Column#17=Name:Manufacturer,Fixed:False,Metric:False,Visible:False,Sort:None,Position:16,Type:0|Column#18=Name:Package Reference,Fixed:False,Metric:False,Visible:False,Sort:None,Position:29,Type:0|Column#19=Name:Pitch,Fixed:False,Metric:False,Visible:False,Sort:None,Position:37,Type:0|Column#20=Name:Datasheet Version,Fixed:False,Metric:False,Visible:False,Sort:None,Position:20,Type:0|Column#21=Name:Part Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:34,Type:0|Column#22=Name:Package URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:30,Type:0|Column#23=Name:Manufacturer URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:22,Type:0|Column#24=Name:No. of Positions,Fixed:False,Metric:False,Visible:False,Sort:None,Position:24,Type:0|Column#25=Name:Packaging,Fixed:False,Metric:False,Visible:False,Sort:None,Position:32,Type:0|Column#26=Name:Mounting Technology,Fixed:False,Metric:False,Visible:False,Sort:None,Position:23,Type:0|Column#27=Name:Gender,Fixed:False,Metric:False,Visible:False,Sort:None,Position:21,Type:0|Column#28=Name:Packing,Fixed:False,Metric:False,Visible:False,Sort:None,Position:33,Type:0|Column#29=Name:Working Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:44,Type:0|Column#30=Name:Orientation,Fixed:False,Metric:False,Visible:False,Sort:None,Position:27,Type:0|Column#31=Name:Contact Resistance,Fixed:False,Metric:False,Visible:False,Sort:None,Position:17,Type:0|Column#32=Name:Package Version,Fixed:False,Metric:False,Visible:False,Sort:None,Position:31,Type:0|Column#33=Name:RoHS,Fixed:False,Metric:False,Visible:False,Sort:None,Position:40,Type:0|Column#34=Name:PartNumber,Fixed:False,Metric:False,Visible:False,Sort:None,Position:35,Type:0|Column#35=Name:Current Rating,Fixed:False,Metric:False,Visible:False,Sort:None,Position:18,Type:0|Column#36=Name:Datasheet URL,Fixed:False,Metric:False,Visible:False,Sort:None,Position:19,Type:0|Column#37=Name:Rated Current,Fixed:False,Metric:False,Visible:False,Sort:None,Position:39,Type:0|Column#38=Name:Row Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:41,Type:0|Column#39=Name:Publisher,Fixed:False,Metric:False,Visible:False,Sort:None,Position:38,Type:0|Column#40=Name:Package Description,Fixed:False,Metric:False,Visible:False,Sort:None,Position:28,Type:0|Column#41=Name:Voltage Rating,Fixed:False,Metric:False,Visible:False,Sort:None,Position:42,Type:0|Column#42=Name:No. of Rows,Fixed:False,Metric:False,Visible:False,Sort:None,Position:25,Type:0|Column#43=Name:Withstanding Voltage,Fixed:False,Metric:False,Visible:False,Sort:None,Position:43,Type:0|Column#44=Name:Pin Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:36,Type:0|Column#45=Name:Operating Temperature,Fixed:False,Metric:False,Visible:False,Sort:None,Position:26,Type:0|DocumentPath=C:\Users\bruno\Documents\GitHub\ECE2500\OpenMEA\Headstage_Mainboard\Headstage_Mainboard.PcbDoc
 OutputType6=Gerber
 OutputName6=Gerber Files
 OutputCategory6=Fabrication
 OutputDocumentPath6=
 OutputVariantName6=
-OutputEnabled6=0
+OutputEnabled6=1
 OutputEnabled6_OutputMedium1=0
 OutputEnabled6_OutputMedium2=0
 OutputEnabled6_OutputMedium3=0
@@ -182,7 +182,7 @@ OutputName7=NC Drill Files
 OutputCategory7=Fabrication
 OutputDocumentPath7=
 OutputVariantName7=
-OutputEnabled7=0
+OutputEnabled7=1
 OutputEnabled7_OutputMedium1=0
 OutputEnabled7_OutputMedium2=0
 OutputEnabled7_OutputMedium3=0
@@ -194,9 +194,9 @@ Configuration7_Item1=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|Ge
 OutputType8=BOM_PartType
 OutputName8=Bill of Materials
 OutputCategory8=Report
-OutputDocumentPath8=
+OutputDocumentPath8=[ActiveBOM Document]
 OutputVariantName8=
-OutputEnabled8=0
+OutputEnabled8=1
 OutputEnabled8_OutputMedium1=0
 OutputEnabled8_OutputMedium2=0
 OutputEnabled8_OutputMedium3=4
@@ -219,9 +219,13 @@ Configuration8_Item6=FileName=[PCB Document 1]
 Configuration8_Name7=SortOrder
 Configuration8_Item7=Designator=Up
 Configuration8_Name8=VisibleOrder
-Configuration8_Item8=Designator=234|Comment=242|Manufacturer=322|Quantity=147|Footprint=132|Value=80
-Configuration8_Name9=VisibleOrder_Flat
-Configuration8_Item9=Designator=234|Comment=242|Manufacturer=322|Quantity=147|Footprint=132|Value=80
+Configuration8_Item8=Designator=234|Comment=242|Description=100|Footprint=100|Quantity=147|Manufacturer 1=100|Manufacturer Part Number 1=100
+Configuration8_Name9=VisibleOrder_Base
+Configuration8_Item9=Line #=54|Comment=145|Description=82|Designator=80|Revision ID=80|Revision State=117|Revision Status=101|Quantity=67|Manufacturer 1=148|Manufacturer Part Number 1=169|Manufacturer Lifecycle 1=147|Supplier 1=75|Supplier Part Number 1=142|Supplier Unit Price 1=127|Supplier Subtotal 1=122
+Configuration8_Name10=VisibleOrder_Consolidated
+Configuration8_Item10=Line #=100|Comment=100|Description=100|Designator=100|Revision ID=100|Revision State=100|Revision Status=100|Quantity=100|Manufacturer 1=102|Manufacturer Part Number 1=169|Manufacturer Lifecycle 1=147|Supplier 1=75|Supplier Part Number 1=142|Supplier Unit Price 1=127|Supplier Subtotal 1=122
+Configuration8_Name11=VisibleOrder_Flat
+Configuration8_Item11=Designator=234|Comment=242|Description=100|Footprint=100|Quantity=147|Manufacturer 1=100|Manufacturer Part Number 1=100
 OutputType9=Design Rules Check
 OutputName9=Design Rules Check
 OutputCategory9=Validation
@@ -501,7 +505,7 @@ OutputName19=Export STEP
 OutputCategory19=Export
 OutputDocumentPath19=
 OutputVariantName19=
-OutputEnabled19=1
+OutputEnabled19=0
 OutputEnabled19_OutputMedium1=0
 OutputEnabled19_OutputMedium2=0
 OutputEnabled19_OutputMedium3=0

@@ -148,7 +148,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LEIJYAHM
 
 [SearchPath1]
 Path=..\..\..\..\isml_altium_common\pcb_libraries\*.*
