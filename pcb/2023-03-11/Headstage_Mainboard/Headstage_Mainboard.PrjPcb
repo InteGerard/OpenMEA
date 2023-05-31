@@ -184,6 +184,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NVVPFAUK
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Headstage_Mainboard\Design Rule Check - Headstage_Mainboard.html
+DItemRevisionGUID=
+
 [SearchPath1]
 Path=..\..\..\..\isml_altium_common\pcb_libraries\*.*
 IncludeSubFolders=1
@@ -1346,7 +1350,7 @@ Type6=2
 Type7=0
 Type8=1
 Type9=1
-Type10=1
+Type10=0
 Type11=2
 Type12=0
 Type13=0
