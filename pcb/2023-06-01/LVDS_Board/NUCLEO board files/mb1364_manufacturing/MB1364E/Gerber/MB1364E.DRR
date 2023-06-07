@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: MB1364.PcbDoc   14/10/2019  21:55:25
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : MB1364E-RoundHoles-Plated.TXT
+ASCII Non-Plated RoundHoles File : MB1364E-RoundHoles-NonPlated.TXT
+ASCII Plated SlotHoles File : MB1364E-SlotHoles-Plated.TXT
+ASCII Non-Plated SlotHoles File : MB1364E-SlotHoles-NonPlated.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.2mm (8mil)                                              Round             2000      PTH        3974.52mm (156.48inch)
+T2      0.3mm (12mil)                                             Round             9         PTH        9.00mm (0.35inch)
+T3      0.6mm (24mil)                                             Slot              4         PTH        296.85mm (11.69inch)
+T4      0.65mm (26mil)                                            Slot              2         PTH        9.30mm (0.37inch)
+T5      0.7mm (28mil)                                             Round             12        PTH        32.68mm (1.29inch)
+T6      0.7mm (28mil)                                             Slot              2         PTH        35.23mm (1.39inch)
+T7      0.9mm (35mil)                                             Round             2         PTH        5.00mm (0.20inch)
+T8      1mm (39mil)                                               Round             171       PTH        836.47mm (32.93inch)
+T9      1.1mm (43mil)                                             Round             100       PTH        444.88mm (17.51inch)
+T10     0.85mm (33mil)                                            Slot              2         NPTH       12.90mm (0.51inch)
+T11     0.97mm (38mil)                                            Round             2         NPTH       6.35mm (0.25inch)
+T12     1.19mm (47mil)                                            Round             2         NPTH       10.89mm (0.43inch)
+T13     1.5mm (59mil)           +/-0.03mm (1mil)                  Round             2         NPTH       16.00mm (0.63inch)
+T14     3.2mm (126mil)                                            Round             5         NPTH       186.91mm (7.36inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              2315
+
+Total Processing Time (hh:mm:ss) : 00:00:01
